@@ -1,11 +1,11 @@
 {
-  "name": "project-alpha-team",
+  "name": "project-alfa-team",
   "version": "1.1.0",
   "description": "",
   "homepage": "https://mikolajlesniczuk.github.io/projekt-alfa-team/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url projekt-alfa-team"
+    "build": "parcel build src/*.html --public-url /projekt-alfa-team/"
   },
   "repository": {
     "type": "git",
