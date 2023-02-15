@@ -1,0 +1,93 @@
+.hero-header {
+  width: 100%;
+  height: 502px;
+  background-color: $color-main-background;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 36px;
+    top: 83px;
+    z-index: 1;
+    content: '';
+    background-image: url(/src/images/Ellipse-header_x1.png);
+    width: 280px;
+    height: 344px;
+    display: block;
+  }
+
+  &__h1 {
+    position: absolute;
+    top: 193px;
+    left: 20px;
+    z-index: 3;
+    width: 218px;
+    height: 106px;
+    text-transform: uppercase;
+    font-family: $Font-secondary;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+
+    &--leftPart {
+      color: $color-white;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+    }
+    &--rightPart {
+      color: $color-red;
+      font-size: 48px;
+      line-height: 46px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__mainPicture {
+    position: absolute;
+    width: 171px;
+    height: 410px;
+    top: 92px;
+    left: 117px;
+    z-index: 2;
+  }
+}
+.button {
+  font-family: $Font-primary;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: center;
+  &--products {
+    width: 61.2px;
+    height: 24px;
+    position: absolute;
+    top: 318px;
+    left: 20px;
+    z-index: 2;
+    background-color: $color-main-theme;
+    color: $color-white;
+    border-radius: 20px;
+    border: none;
+  }
+  &--products:hover {
+    background-color: $color-button-hover-main;
+    cursor: pointer;
+  }
+  &--how {
+    width: 82.8px;
+    height: 24px;
+    position: absolute;
+    top: 318px;
+    left: 90.4px;
+    z-index: 3;
+    background-color: $color-white;
+    color: $color-main-theme;
+    border-radius: 20px;
+    border: none;
+  }
+  &--how:hover {
+    background-color: $color-button-hover-secondary;
+    cursor: pointer;
+  }
+}
