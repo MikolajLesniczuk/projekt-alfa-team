@@ -16,10 +16,9 @@ ul {
     text-decoration: none;
     }
 
-    .container{
-
-        max-width: 480px;
-        margin: 0 auto;
+.container{
+    max-width: 480px;
+    margin: 0 auto;
             @include tablet{
                 max-width: 768px;
                 margin: 0 auto;
