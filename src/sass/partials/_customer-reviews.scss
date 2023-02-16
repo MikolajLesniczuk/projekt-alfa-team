@@ -100,11 +100,16 @@
   }
   &__button {
     content: '';
+    cursor: pointer;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: $color-testimonials-dots;
     border: none;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      background-color: $color-main-theme;
+    }
     &.active {
       background: transparent;
       position: relative;
