@@ -1,0 +1,138 @@
+.hero-header {
+  width: 100%;
+  height: 502px;
+  background-color: $color-main-background;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 36px;
+    top: 83px;
+    z-index: 1;
+    content: '';
+    background-image: url(/src/images/Ellipse-header_x1.png);
+    width: 280px;
+    height: 344px;
+    display: block;
+  }
+  // &__logo {
+  //   width: 199px;
+  //   height: 50px;
+  //   padding: 6px 20px;
+  // }
+  &__h1 {
+    position: absolute;
+    top: 193px;
+    left: 20px;
+    z-index: 3;
+    width: 218px;
+    height: 106px;
+    text-transform: uppercase;
+    font-family: $Font-secondary;
+    font-style: normal;
+    font-weight: 100;
+    text-align: left;
+
+    &--upperPart {
+      color: $color-white;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+    }
+    &--downPart {
+      color: $color-red;
+      font-size: 48px;
+      line-height: 46px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__mainPicture {
+    position: absolute;
+    width: 171px;
+    height: 410px;
+    top: 92px;
+    left: 117px;
+    z-index: 2;
+    object-fit: fill;
+  }
+}
+.button {
+  font-family: $Font-primary;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: center;
+  &--products {
+    width: 61.2px;
+    height: 24px;
+    position: absolute;
+    top: 318px;
+    left: 20px;
+    z-index: 2;
+    background-color: $color-main-theme;
+    color: $color-white;
+    border-radius: 20px;
+    border: none;
+  }
+  &--products:hover {
+    background-color: $color-button-hover-main;
+    cursor: pointer;
+  }
+  &--how {
+    width: 82.8px;
+    height: 24px;
+    position: absolute;
+    top: 318px;
+    left: 90.4px;
+    z-index: 3;
+    background-color: $color-white;
+    color: $color-main-theme;
+    border-radius: 20px;
+    border: none;
+  }
+  &--how:hover {
+    background-color: $color-button-hover-secondary;
+    cursor: pointer;
+  }
+}
+@include tablet {
+  .hero-header {
+    min-width: 768px;
+    height: 399px;
+    &::before {
+      position: absolute;
+      left: 307px;
+      top: 31px;
+      content: '';
+      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+      background-size: contain;
+      width: 324px;
+      height: 322px;
+      display: block;
+    }
+
+    &__h1 {
+      position: absolute;
+      top: 102px;
+      left: 34px;
+      width: 162px;
+      height: 80px;
+      &--upperPart {
+        font-size: 22px;
+        line-height: 25px;
+      }
+      &--downPart {
+        font-family: Titan One;
+        font-size: 34px;
+        line-height: 31px;
+      }
+    }
+    &__mainPicture {
+      width: 143px;
+      height: 336px;
+      top: 63px;
+      left: 378px;
+    }
+  }
+}
