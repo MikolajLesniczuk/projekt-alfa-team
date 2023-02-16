@@ -5,7 +5,7 @@
   position: relative;
   &::before {
     position: absolute;
-    left: 11.25vw;
+    left: 12vw;
     top: 25.94vw;
     z-index: 1;
     content: '';
@@ -69,7 +69,7 @@
     }
 
     &--products {
-      width: 19.13vw;
+      width: 19.5vw;
       height: 7.5vw;
       position: absolute;
       top: 99.38vw;
@@ -101,16 +101,129 @@
       cursor: pointer;
     }
     &--circle {
-      width: 5vw;
-      height: 5vw;
-      border-radius: 50%;
-      border: none;
-      background-image: url(/src/images/icons/arrowrightheader_x3.png);
-      object-fit: cover;
+      display: none;
     }
   }
   &__loremIpsum {
     display: none;
+  }
+}
+@include phone {
+  .hero-header {
+    width: 100%;
+    height: 753px;
+    background-color: $color-main-background;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 57.6px;
+      top: 124.51px;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/Ellipse-header_x1.png);
+      width: 420px;
+      height: 516.96px;
+      display: block;
+    }
+    &__h1 {
+      position: absolute;
+      top: 289.49px;
+      left: 30px;
+      z-index: 3;
+      width: 327.02px;
+      height: 158.98px;
+      text-transform: uppercase;
+      font-family: $Font-secondary;
+      font-style: normal;
+      font-weight: 100;
+      text-align: left;
+
+      &--upperPart {
+        color: $color-white;
+        font-size: 39px;
+        line-height: 45.02px;
+        letter-spacing: 0.04em;
+      }
+      &--downPart {
+        color: $color-red;
+        font-size: 72px;
+        line-height: 69.02px;
+        letter-spacing: 0em;
+      }
+    }
+
+    &__mainPicture {
+      position: absolute;
+      width: 256.51px;
+      height: 615.02px;
+      top: 138px;
+      left: 175.49px;
+      z-index: 2;
+      object-fit: fill;
+    }
+    &__statistic {
+      display: none;
+    }
+    .button {
+      font-family: $Font-primary;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15.02px;
+      letter-spacing: 0em;
+      text-align: center;
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
+
+      &--products {
+        width: 91.82px;
+        height: 36px;
+        position: absolute;
+        top: 477.02px;
+        left: 30px;
+        z-index: 2;
+        background-color: $color-main-theme;
+        color: $color-white;
+        border-radius: 30px;
+        border: none;
+      }
+      &--products:hover {
+        background-color: $color-button-hover-main;
+        cursor: pointer;
+      }
+      &--how {
+        width: 124.22px;
+        height: 36px;
+        position: absolute;
+        top: 477.02px;
+        left: 135.6px;
+        z-index: 3;
+        background-color: $color-white;
+        color: $color-main-theme;
+        border-radius: 30px;
+        border: none;
+      }
+      &--how:hover {
+        background-color: $color-button-hover-secondary;
+        cursor: pointer;
+      }
+      &--circle {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: 7px;
+        border-radius: 50%;
+        border: none;
+        background-image: url(/src/images/icons/arrowrightheader_x3.png);
+        object-fit: cover;
+      }
+    }
+    &__loremIpsum {
+      display: none;
+    }
   }
 }
 @include tablet {
@@ -257,8 +370,14 @@
       }
     }
     .button {
+      font-family: $Font-primary;
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 10px;
+      letter-spacing: 0em;
+      text-align: center;
       &--products {
-        width: 61.2px;
+        width: 62.4px;
         height: 24px;
         position: absolute;
         top: 220px;
@@ -282,9 +401,6 @@
         background-color: $color-button-hover-secondary;
         cursor: pointer;
       }
-      &--circle {
-        margin-top: 7px;
-      }
     }
     &__loremIpsum {
       display: block;
@@ -305,10 +421,10 @@
       }
     }
   }
-}
-#hero-header__arrow {
-  width: 10px;
-  height: 10px;
-  fill: #d41443;
-  padding-bottom: 4px;
+  #hero-header__arrow {
+    width: 10px;
+    height: 10px;
+    fill: #d41443;
+    padding-bottom: 4px;
+  }
 }
