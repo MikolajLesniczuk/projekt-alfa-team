@@ -1,0 +1,32 @@
+.advantages {
+  background-color: $color-secondary-background;
+  padding-top: 39px;
+  padding-bottom: 59px;
+  padding-left: 19px;
+  display: flex;
+}
+
+.advantages-list {
+  &__item {
+    margin-bottom: 38px;
+  }
+  &__icon {
+    margin-bottom: 16px;
+  }
+  &__title {
+    color: $color-main-theme;
+    font-family: $Font-secondary;
+    font-size: 36px;
+    line-height: calc(41.22px / 36px);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  &__description {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: calc(20.4px / 12px);
+    max-width: 230px;
+    margin-top: 18px;
+  }
+}

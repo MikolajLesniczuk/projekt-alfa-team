@@ -302,4 +302,35 @@ a {
 
 .tabcontent {
   display: none;
+}
+
+.advantages {
+  background-color: #fff5f6;
+  padding-top: 39px;
+  padding-bottom: 59px;
+  padding-left: 19px;
+  display: flex;
+}
+
+.advantages-list__item {
+  margin-bottom: 38px;
+}
+.advantages-list__icon {
+  margin-bottom: 16px;
+}
+.advantages-list__title {
+  color: #d41443;
+  font-family: "Titan One", sans-serif;
+  font-size: 36px;
+  line-height: 1.145;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.advantages-list__description {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  max-width: 230px;
+  margin-top: 18px;
 }/*# sourceMappingURL=main.css.map */
