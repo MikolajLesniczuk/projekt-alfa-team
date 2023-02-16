@@ -12,6 +12,15 @@
     margin-bottom: 8px;
     padding: 43px 66px 26px 57px;
     background: $color-testimonials-background;
+
+    @include tablet {
+      padding: 47px 80px 34px 80px;
+      background: $color-testimonials-background-tablet;
+    }
+    @include desktop {
+      padding: 47px 89px 39px 87px;
+      background: $color-testimonials-background;
+    }
   }
 
   &__review {
@@ -28,6 +37,32 @@
       $color-testimonials-background 29px,
       #e1e1e1 30px
     );
+    @include tablet {
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      font-size: 14px;
+      max-width: 460px;
+      margin: 0 auto;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        $color-testimonials-background-tablet,
+        $color-testimonials-background-tablet 29px,
+        #e1e1e1 30px
+      );
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      max-width: 750px;
+      margin: 0 auto;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        $color-testimonials-background,
+        $color-testimonials-background 29px,
+        #e1e1e1 30px
+      );
+    }
     &::before {
       z-index: -1;
       content: '';
@@ -37,6 +72,14 @@
       left: 4px;
       background-image: url('../images/icon-quote.svg');
       position: absolute;
+      @include tablet {
+        top: -17px;
+        left: -40px;
+      }
+      @include desktop {
+        top: -15px;
+        left: -37px;
+      }
     }
   }
   &__signature {
