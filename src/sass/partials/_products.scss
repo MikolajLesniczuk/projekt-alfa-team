@@ -56,18 +56,17 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    /* 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .products__item--pink::before {
-        background-image: url('/src/images/products/secondice-mob-x2.png');
-      }
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-mob-x2.png);
     }
+  }
 
-    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .products__item--pink::before {
-        background-image: url('/src/images/products/secondice-mob-x3.png');
-      }
-    }*/
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-mob-x3.png);
+    }
   }
   &__item--coffee {
     background: $color-coffee;
@@ -80,19 +79,20 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    /* 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .products__item--coffee::before {
-        background-image: url('/src/images/products/coffeemob-x2.png');
-      }
-    }
-
-    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .products__item--coffee::before {
-        background-image: url('/src/images/products/coffeemob-x3.png');
-      }
-    }*/
   }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--coffee::before {
+      background-image: url('/src/images/products/coffeemob-x2.png');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--coffee::before {
+      background-image: url('/src/images/products/coffeemob-x3.png');
+    }
+  }
+
   &__item--shake {
     background: $color-milkshake;
   }
@@ -104,19 +104,20 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    /* 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .products__item--shake::before {
-        background-image: url('/src/images/products/shakemob-x2.png');
-      }
-    }
-
-    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .products__item--shake::before {
-        background-image: url('/src/images/products/shakemob-x3.png');
-      }
-    } */
   }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--shake::before {
+      background-image: url('/src/images/products/shakemob-x2.png');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--shake::before {
+      background-image: url('/src/images/products/shakemob-x3.png');
+    }
+  }
+
   &__item-caption {
     margin-top: 168px;
     margin-bottom: 54px;
@@ -125,7 +126,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $color-white;
@@ -133,7 +133,7 @@
   &__item-caption::after {
     content: '...';
     top: 30px;
-    right: 60px;
+    right: 65px;
     position: relative;
   }
   &__item-description {
