@@ -1,31 +1,44 @@
-body{
-    font-family:$Font-primary;
+body {
+  font-family: $Font-primary;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 ul {
-    list-style-type: none;
-   
-    }
-    
-    a {
-    text-decoration: none;
-    }
+  list-style-type: none;
+}
 
-.container{
-    max-width: 480px;
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  @include tablet {
+    max-width: 768px;
     margin: 0 auto;
-            @include tablet{
-                max-width: 768px;
-                margin: 0 auto;
-            }
-            @include desktop {
-                margin: 0 auto;
-                max-width: 1280px;
-            }
-        }
+  }
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}
+.button {
+  min-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  &--white {
+    background-color: $color-white;
+    color: $color-main-theme;
+  }
+  &--main {
+    background-color: $color-main-theme;
+    color: $color-white;
+  }
+}
