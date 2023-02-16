@@ -1,9 +1,71 @@
-.customer-reviews {
+.customer-review {
+  padding: 0px 20px;
+  font-family: $Font-primary;
   &__customer {
+    margin: 0 auto;
     width: 85px;
     height: 85px;
+    display: block;
   }
-  &__review {
+  &__box {
+    margin-top: 29px;
+    margin-bottom: 8px;
     padding: 43px 66px 26px 57px;
+    background: $color-testimonials-background;
+  }
+
+  &__review {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30.6px;
+    text-align: center;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      $color-testimonials-background,
+      $color-testimonials-background 29px,
+      #e1e1e1 30px
+    );
+  }
+  &__signature {
+    position: relative;
+    font-family: $Font-primary;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    color: $color-black;
+    &::before {
+      margin-bottom: 18px;
+      content: '. . .';
+      font-size: 36px;
+      color: $color-main-theme;
+      display: block;
+    }
+  }
+  &__button {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-testimonials-dots;
+    border: none;
+    &--active {
+      background: transparent;
+      position: relative;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  &__slider {
+    margin-top: 35px;
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    gap: 18px;
   }
 }
