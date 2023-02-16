@@ -8,7 +8,7 @@
     margin-bottom: 152px;
   }
   &__head-description {
-    font-family: $Font-primary;
+    font-family: $Font-secondary;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -47,15 +47,16 @@
   &__item--pink {
     background: $color-secondary-theme;
   }
+
   &__item--pink::before {
     content: '';
-    background-image: url('/src/images/products/secondice-mob.png');
+    background-image: url(/src/images/products/secondice-mob.png);
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
     display: flex;
     justify-content: center;
-
+    /* 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--pink::before {
         background-image: url('/src/images/products/secondice-mob-x2.png');
@@ -66,17 +67,20 @@
       .products__item--pink::before {
         background-image: url('/src/images/products/secondice-mob-x3.png');
       }
-    }
+    }*/
+  }
+  &__item--coffee {
+    background: $color-coffee;
   }
   &__item--coffee::before {
     content: '';
-    background-image: url('/src/images/products/coffeemob.png');
+    background-image: url(/src/images/products/coffeemob.png);
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
     display: flex;
     justify-content: center;
-
+    /* 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--coffee::before {
         background-image: url('/src/images/products/coffeemob-x2.png');
@@ -87,17 +91,20 @@
       .products__item--coffee::before {
         background-image: url('/src/images/products/coffeemob-x3.png');
       }
-    }
+    }*/
+  }
+  &__item--shake {
+    background: $color-milkshake;
   }
   &__item--shake::before {
     content: '';
-    background-image: url('/src/images/products/shakemob.png');
+    background-image: url(/src/images/products/shakemob.png);
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
     display: flex;
     justify-content: center;
-
+    /* 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--shake::before {
         background-image: url('/src/images/products/shakemob-x2.png');
@@ -108,7 +115,7 @@
       .products__item--shake::before {
         background-image: url('/src/images/products/shakemob-x3.png');
       }
-    }
+    } */
   }
   &__item-caption {
     margin-top: 168px;
@@ -138,5 +145,6 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: $color-white;
+    margin-bottom: 30px;
   }
 }
