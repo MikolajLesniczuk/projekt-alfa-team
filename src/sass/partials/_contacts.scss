@@ -1,0 +1,146 @@
+.contacts {
+  padding-left: 50px;
+  padding-right: 50px;
+  &__background {
+    background-image: linear-gradient(to bottom, $color-white 15%, #fff5f6 15%);
+  }
+}
+
+.hidden-title {
+  display: none;
+}
+
+.contacts__container {
+  width: 100%;
+  padding: 43px 20px;
+  background: $color-white;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  &--title {
+    background: #f0d1a5;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-white;
+    width: fit-content;
+    padding: 0 44px;
+    margin-bottom: 25px;
+    &Secondary {
+      background: #c2e297;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 186%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: $color-white;
+      width: fit-content;
+      padding: 0 44px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &--city {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  &--name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+
+  &--description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #907e82;
+    word-break: break-all;
+    margin-top: 10px;
+  }
+
+  &--time {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    color: $color-secondary-theme;
+  }
+
+  &--open {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.contacts__group {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 25px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__group > a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #907e82;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.button__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 54px;
+}
+
+.button__style {
+  width: 100%;
+  padding-left: 17px;
+  padding-right: 17px;
+  height: 44px;
+  border-style: none;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button__style--location {
+  background: $color-red;
+  color: $color-white;
+}
+
+.button__style--franchise {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: $color-white;
+  color: $color-red;
+}
