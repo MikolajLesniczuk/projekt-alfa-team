@@ -14,7 +14,11 @@
     height: 344px;
     display: block;
   }
-
+  // &__logo {
+  //   width: 199px;
+  //   height: 50px;
+  //   padding: 6px 20px;
+  // }
   &__h1 {
     position: absolute;
     top: 193px;
@@ -25,16 +29,16 @@
     text-transform: uppercase;
     font-family: $Font-secondary;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     text-align: left;
 
-    &--leftPart {
+    &--upperPart {
       color: $color-white;
       font-size: 26px;
       line-height: 30px;
       letter-spacing: 0.04em;
     }
-    &--rightPart {
+    &--downPart {
       color: $color-red;
       font-size: 48px;
       line-height: 46px;
@@ -49,6 +53,7 @@
     top: 92px;
     left: 117px;
     z-index: 2;
+    object-fit: fill;
   }
 }
 .button {
@@ -89,5 +94,45 @@
   &--how:hover {
     background-color: $color-button-hover-secondary;
     cursor: pointer;
+  }
+}
+@include tablet {
+  .hero-header {
+    min-width: 768px;
+    height: 399px;
+    &::before {
+      position: absolute;
+      left: 307px;
+      top: 31px;
+      content: '';
+      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+      background-size: contain;
+      width: 324px;
+      height: 322px;
+      display: block;
+    }
+
+    &__h1 {
+      position: absolute;
+      top: 102px;
+      left: 34px;
+      width: 162px;
+      height: 80px;
+      &--upperPart {
+        font-size: 22px;
+        line-height: 25px;
+      }
+      &--downPart {
+        font-family: Titan One;
+        font-size: 34px;
+        line-height: 31px;
+      }
+    }
+    &__mainPicture {
+      width: 143px;
+      height: 336px;
+      top: 63px;
+      left: 378px;
+    }
   }
 }

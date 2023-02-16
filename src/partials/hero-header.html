@@ -1,23 +1,33 @@
 <body>
     <div class="container hero-header">
+        <!-- <div class="hero-header__logo">
+            <img src="/src/images/logo.png" alt="logo of the icecream company">
+        </div> -->
 
         <div class="hero-header__h1">
             <h1>
-                <p class="hero-header__h1--leftPart">Ice cream made with</p>
-                <p class="hero-header__h1--rightPart">passion</p>
+                <p class="hero-header__h1--upperPart">Ice cream made with</p>
+                <p class="hero-header__h1--downPart">passion</p>
             </h1>
         </div>
         <div class="hero-header__buttons">
             <button type="button" class="button button--products">
-                Products
+                <a href="#products">Products</a>
             </button>
             <button type="button" class="button button--how">
-                How it's made?
+                <a href="#howItsMade">How it's made?</a>
             </button>
         </div>
 
-        <div class="hero-header__mainPicture"><img src="/src/images/products/mainice-mob.png"
-                alt="The big colorfull icecrem"></div>
+        <img class="hero-header__mainPicture" alt="The big colorfull icecream"
+            src="/src/images/products/mainice-mob.png" srcset="/src/images/products/mainice-mob-x2.png
+                    /src/images/products/mainice-mob-x3.png
+                     /src/images/products/mainice-mob.png 320w,
+                     /src/images/products/mainice-mob-x2.png 640w
+                     /src/images/products/mainice-mob-x3.png 960w"
+            sizes="(min-width: 748px) 320px, (min-width: 480px) 640px " />
+
+
 
     </div>
 </body>
