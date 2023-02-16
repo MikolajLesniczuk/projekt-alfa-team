@@ -14,11 +14,6 @@
     height: 344px;
     display: block;
   }
-  // &__logo {
-  //   width: 199px;
-  //   height: 50px;
-  //   padding: 6px 20px;
-  // }
   &__h1 {
     position: absolute;
     top: 193px;
@@ -55,51 +50,73 @@
     z-index: 2;
     object-fit: fill;
   }
-}
-.button {
-  font-family: $Font-primary;
-  font-size: 8px;
-  font-weight: 400;
-  line-height: 10px;
-  letter-spacing: 0em;
-  text-align: center;
-  &--products {
-    width: 61.2px;
-    height: 24px;
-    position: absolute;
-    top: 318px;
-    left: 20px;
-    z-index: 2;
-    background-color: $color-main-theme;
-    color: $color-white;
-    border-radius: 20px;
-    border: none;
+  &__statistic {
+    display: none;
   }
-  &--products:hover {
-    background-color: $color-button-hover-main;
-    cursor: pointer;
+  .button {
+    font-family: $Font-primary;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+    &--link1 {
+      color: $color-white;
+    }
+    &--link2 {
+      color: $color-main-theme;
+    }
+
+    &--products {
+      width: 61.2px;
+      height: 24px;
+      position: absolute;
+      top: 318px;
+      left: 20px;
+      z-index: 2;
+      background-color: $color-main-theme;
+      color: $color-white;
+      border-radius: 20px;
+      border: none;
+    }
+    &--products:hover {
+      background-color: $color-button-hover-main;
+      cursor: pointer;
+    }
+    &--how {
+      width: 82.8px;
+      height: 24px;
+      position: absolute;
+      top: 318px;
+      left: 90.4px;
+      z-index: 3;
+      background-color: $color-white;
+      color: $color-main-theme;
+      border-radius: 20px;
+      border: none;
+    }
+    &--how:hover {
+      background-color: $color-button-hover-secondary;
+      cursor: pointer;
+    }
+    &--circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: none;
+      background-image: url(/src/images/icons/arrowrightheader_x3.png);
+      object-fit: cover;
+    }
   }
-  &--how {
-    width: 82.8px;
-    height: 24px;
-    position: absolute;
-    top: 318px;
-    left: 90.4px;
-    z-index: 3;
-    background-color: $color-white;
-    color: $color-main-theme;
-    border-radius: 20px;
-    border: none;
-  }
-  &--how:hover {
-    background-color: $color-button-hover-secondary;
-    cursor: pointer;
+  &__loremIpsum {
+    display: none;
   }
 }
 @include tablet {
   .hero-header {
     min-width: 768px;
     height: 399px;
+    margin: auto;
     &::before {
       position: absolute;
       left: 307px;
@@ -109,6 +126,18 @@
       background-size: contain;
       width: 324px;
       height: 322px;
+      display: block;
+    }
+    &::after {
+      position: absolute;
+      left: 566px;
+      top: 266px;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/tastypic-tab.png);
+      object-fit: cover;
+      width: 168px;
+      height: 133px;
       display: block;
     }
 
@@ -123,9 +152,19 @@
         line-height: 25px;
       }
       &--downPart {
-        font-family: Titan One;
         font-size: 34px;
         line-height: 31px;
+      }
+      &::after {
+        position: absolute;
+        top: 143px;
+        z-index: 1;
+        content: '';
+        background-image: url(/src/images/jug-with-milk_tab_x1.png);
+        object-fit: cover;
+        width: 124px;
+        height: 126px;
+        display: block;
       }
     }
     &__mainPicture {
@@ -134,5 +173,141 @@
       top: 63px;
       left: 378px;
     }
+    &__statistic {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      width: 55px;
+      height: 108px;
+      margin-left: 690px;
+      padding-top: 96px;
+      position: relative;
+
+      &--number {
+        position: absolute;
+        font-family: $Font-secondary;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: $color-main-theme;
+        z-index: 2;
+      }
+      &--kind1 {
+        position: absolute;
+        top: 32px;
+        left: 10px;
+        font-family: $Font-primary;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $color-white;
+        text-align: right;
+      }
+      &--kind2 {
+        position: absolute;
+        top: 32px;
+        right: 20px;
+        width: 45px;
+        font-family: $Font-primary;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $color-white;
+        text-align: right;
+      }
+
+      &--paragraf1 {
+        width: 43px;
+        height: 44px;
+        margin-bottom: 43px;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 27px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          display: block;
+          z-index: 1;
+        }
+      }
+      &--paragraf2 {
+        width: 55px;
+        height: 43px;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 27px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+    .button {
+      &--products {
+        width: 61.2px;
+        height: 24px;
+        position: absolute;
+        top: 220px;
+        left: 34px;
+        z-index: 1;
+      }
+
+      &--how {
+        width: 82.8px;
+        height: 24px;
+        position: absolute;
+        top: 220px;
+        left: 104.4px;
+        z-index: 3;
+        background-color: $color-white;
+        color: $color-main-theme;
+        border-radius: 20px;
+        border: none;
+      }
+      &--how:hover {
+        background-color: $color-button-hover-secondary;
+        cursor: pointer;
+      }
+      &--circle {
+        margin-top: 7px;
+      }
+    }
+    &__loremIpsum {
+      display: block;
+      width: 100px;
+      height: 48px;
+      position: absolute;
+      top: 292px;
+      left: 154px;
+      z-index: 2;
+
+      &--text {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $color-white;
+      }
+    }
   }
+}
+#hero-header__arrow {
+  width: 10px;
+  height: 10px;
+  fill: #d41443;
+  padding-bottom: 4px;
 }
