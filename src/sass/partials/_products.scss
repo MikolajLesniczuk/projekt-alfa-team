@@ -8,24 +8,24 @@
     margin-bottom: 152px;
   }
   &__head-description {
-    font-family: 'Titan One';
+    font-family: $Font-primary;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
-    color: #ffa5ba;
+    color: $color-secondary-theme;
   }
   &__head-title {
-    font-family: 'Titan One';
+    font-family: $Font-secondary;
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
     line-height: 39px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #d41443;
+    color: $color-main-theme;
   }
   &__wrapper {
     display: flex;
@@ -45,11 +45,11 @@
     padding: 0 40px;
   }
   &__item--pink {
-    background: #ffb8ca;
+    background: $color-secondary-theme;
   }
   &__item--pink::before {
-    content: 'sd';
-    background-image: url('../../images/products/secondice-mob.png');
+    content: '';
+    background-image: url('/src/images/products/secondice-mob.png');
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
@@ -57,26 +57,63 @@
     justify-content: center;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .products__item--pink {
-        background-image: url('../../images/products/secondice-mob-x2.png');
+      .products__item--pink::before {
+        background-image: url('/src/images/products/secondice-mob-x2.png');
       }
     }
+
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .products__item--pink {
-        background-image: url('../../images/products/secondice-mob-x3.png');
+      .products__item--pink::before {
+        background-image: url('/src/images/products/secondice-mob-x3.png');
       }
     }
   }
-  &__item--carmel {
-    background: #f0d1a5;
+  &__item--coffee::before {
+    content: '';
+    background-image: url('/src/images/products/coffeemob.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .products__item--coffee::before {
+        background-image: url('/src/images/products/coffeemob-x2.png');
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .products__item--coffee::before {
+        background-image: url('/src/images/products/coffeemob-x3.png');
+      }
+    }
   }
-  &__item--lime {
-    background: #c2e297;
+  &__item--shake::before {
+    content: '';
+    background-image: url('/src/images/products/shakemob.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .products__item--shake::before {
+        background-image: url('/src/images/products/shakemob-x2.png');
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .products__item--shake::before {
+        background-image: url('/src/images/products/shakemob-x3.png');
+      }
+    }
   }
   &__item-caption {
     margin-top: 168px;
     margin-bottom: 54px;
-    font-family: 'Titan One';
+    font-family: $Font-secondary;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -84,7 +121,7 @@
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $color-white;
   }
   &__item-caption::after {
     content: '...';
@@ -93,13 +130,13 @@
     position: relative;
   }
   &__item-description {
-    font-family: 'DM Sans';
+    font-family: $Font-primary;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #ffffff;
+    color: $color-white;
   }
 }
