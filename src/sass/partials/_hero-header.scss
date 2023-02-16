@@ -1,26 +1,27 @@
 .hero-header {
-  width: 100%;
-  height: 502px;
+  width: 100vw;
+  height: 157.19vw;
   background-color: $color-main-background;
   position: relative;
   &::before {
     position: absolute;
-    left: 36px;
-    top: 83px;
+    left: 11.25vw;
+    top: 25.94vw;
     z-index: 1;
     content: '';
     background-image: url(/src/images/Ellipse-header_x1.png);
-    width: 280px;
-    height: 344px;
+    background-size: contain;
+    width: 87.5vw;
+    height: 107.7vw;
     display: block;
   }
   &__h1 {
     position: absolute;
-    top: 193px;
-    left: 20px;
+    top: 60.31vw;
+    left: 6.25vw;
     z-index: 3;
-    width: 218px;
-    height: 106px;
+    width: 68.13vw;
+    height: 33.12vw;
     text-transform: uppercase;
     font-family: $Font-secondary;
     font-style: normal;
@@ -29,35 +30,35 @@
 
     &--upperPart {
       color: $color-white;
-      font-size: 26px;
-      line-height: 30px;
+      font-size: 8.125vw;
+      line-height: 9.38vw;
       letter-spacing: 0.04em;
     }
     &--downPart {
       color: $color-red;
-      font-size: 48px;
-      line-height: 46px;
+      font-size: 15vw;
+      line-height: 14.38vw;
       letter-spacing: 0em;
     }
   }
 
   &__mainPicture {
     position: absolute;
-    width: 171px;
-    height: 410px;
-    top: 92px;
-    left: 117px;
+    width: 53.44vw;
+    height: 128.13vw;
+    top: 28.75vw;
+    left: 36.56vw;
     z-index: 2;
-    object-fit: fill;
+    object-fit: cover;
   }
   &__statistic {
     display: none;
   }
   .button {
     font-family: $Font-primary;
-    font-size: 8px;
+    font-size: 2.5vw;
     font-weight: 400;
-    line-height: 10px;
+    line-height: 3.13vw;
     letter-spacing: 0em;
     text-align: center;
     &--link1 {
@@ -68,15 +69,15 @@
     }
 
     &--products {
-      width: 61.2px;
-      height: 24px;
+      width: 19.13vw;
+      height: 7.5vw;
       position: absolute;
-      top: 318px;
-      left: 20px;
+      top: 99.38vw;
+      left: 6.25vw;
       z-index: 2;
       background-color: $color-main-theme;
       color: $color-white;
-      border-radius: 20px;
+      border-radius: 6.25vw;
       border: none;
     }
     &--products:hover {
@@ -84,15 +85,15 @@
       cursor: pointer;
     }
     &--how {
-      width: 82.8px;
-      height: 24px;
+      width: 25.88vw;
+      height: 7.5vw;
       position: absolute;
-      top: 318px;
-      left: 90.4px;
+      top: 99.38vw;
+      left: 28.25vw;
       z-index: 3;
       background-color: $color-white;
       color: $color-main-theme;
-      border-radius: 20px;
+      border-radius: 6.25vw;
       border: none;
     }
     &--how:hover {
@@ -100,8 +101,8 @@
       cursor: pointer;
     }
     &--circle {
-      width: 16px;
-      height: 16px;
+      width: 5vw;
+      height: 5vw;
       border-radius: 50%;
       border: none;
       background-image: url(/src/images/icons/arrowrightheader_x3.png);
