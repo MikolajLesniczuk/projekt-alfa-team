@@ -1,3 +1,7 @@
+
+
+
+
 body{
     font-family:$Font-primary;
 }
@@ -27,5 +31,6 @@ ul {
             @include desktop {
                 margin: 0 auto;
                 max-width: 1280px;
+                
             }
         }
