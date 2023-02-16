@@ -15,18 +15,29 @@
   }
 
   &__review {
+    position: relative;
+    z-index: 0;
     color: $color-black;
     font-size: 12px;
     font-weight: 500;
     line-height: 30.6px;
     text-align: center;
-
     background-image: repeating-linear-gradient(
       to bottom,
       $color-testimonials-background,
       $color-testimonials-background 29px,
       #e1e1e1 30px
     );
+    &::before {
+      z-index: -1;
+      content: '';
+      width: 54px;
+      height: 40px;
+      top: -15px;
+      left: 4px;
+      background-image: url('../images/icon-quote.svg');
+      position: absolute;
+    }
   }
   &__signature {
     position: relative;
