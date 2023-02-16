@@ -1,7 +1,7 @@
 .customer-review {
   padding: 0px 20px;
   font-family: $Font-primary;
-  &__customer {
+  &__customer-image {
     margin: 0 auto;
     width: 85px;
     height: 85px;
@@ -100,14 +100,22 @@
   }
   &__button {
     content: '';
+    cursor: pointer;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: $color-testimonials-dots;
     border: none;
-    &--active {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      background-color: $color-main-theme;
+    }
+    &.active {
       background: transparent;
       position: relative;
+      content: '';
+      border-radius: 0%;
+      background-image: $testimony-tab-icon;
     }
   }
   &__icon {
@@ -122,4 +130,7 @@
     justify-content: center;
     gap: 18px;
   }
+}
+.tabcontent {
+  display: none;
 }
