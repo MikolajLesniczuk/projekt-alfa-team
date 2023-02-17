@@ -1,0 +1,20 @@
+.menu-container {
+  padding: 60px, 21px;
+  &__btn {
+    width: 100%;
+  }
+  &__items {
+    display: flex;
+    gap: 23px;
+  }
+  &__item {
+    display: block;
+  }
+  &__link {
+    font-weight: 700;
+  }
+}
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+}

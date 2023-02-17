@@ -1,0 +1,21 @@
+.header {
+  &__container {
+    display: flex;
+    padding: 6px, 20px, 36px, 20px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav-items {
+    display: flex;
+    gap: 23px;
+  }
+  &__nav-item {
+    display: block;
+  }
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
