@@ -1,33 +1,46 @@
-<body>
-    <div class="container hero-header">
-        <!-- <div class="hero-header__logo">
-            <img src="/src/images/logo.png" alt="logo of the icecream company">
-        </div> -->
-
-        <div class="hero-header__h1">
-            <h1>
-                <p class="hero-header__h1--upperPart">Ice cream made with</p>
-                <p class="hero-header__h1--downPart">passion</p>
-            </h1>
+<div class="container hero-header">
+    <div class="hero-header__h1">
+        <h1>
+            <span class="hero-header__h1--upperPart">ice cream made with</span>
+            <span class="hero-header__h1--downPart">passion</span>
+        </h1>
+    </div>
+    <div class="hero-header__buttons">
+        <button type="button" class="button button--products">
+            <a class="button--link1" href="#our-products">Products</a>
+        </button>
+        <button type="button" class="button button--how">
+            <a class="button--link2" href="#how-its-made">How it's made?</a>
+        </button>
+    </div>
+    <div class="hero-header__statistic">
+        <div class="hero-header__statistic--paragraf1">
+            <span class="hero-header__statistic--number">16</span>
+            <span class="hero-header__statistic--kind1">Cafes</span>
         </div>
-        <div class="hero-header__buttons">
-            <button type="button" class="button button--products">
-                <a href="#products">Products</a>
-            </button>
-            <button type="button" class="button button--how">
-                <a href="#howItsMade">How it's made?</a>
-            </button>
+        <div class="hero-header__statistic--paragraf2">
+            <span class="hero-header__statistic--number">23</span>
+            <span class="hero-header__statistic--kind2">food trucks</span>
         </div>
 
-        <img class="hero-header__mainPicture" alt="The big colorfull icecream"
-            src="/src/images/products/mainice-mob.png" srcset="/src/images/products/mainice-mob-x2.png
+    </div>
+
+    <img class="hero-header__mainPicture" alt="The big colorfull icecream" src="/src/images/products/mainice-mob.png"
+        srcset="/src/images/products/mainice-mob-x2.png
                     /src/images/products/mainice-mob-x3.png
                      /src/images/products/mainice-mob.png 320w,
                      /src/images/products/mainice-mob-x2.png 640w
                      /src/images/products/mainice-mob-x3.png 960w"
-            sizes="(min-width: 748px) 320px, (min-width: 480px) 640px " />
-
-
-
+        sizes="(min-width: 748px) 320px, (min-width: 480px) 640px " />
+    <div class="hero-header__loremIpsum">
+        <p class="hero-header__loremIpsum--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et</p>
+        <button type="button" class="button--circle">
+            <a href="#">
+                <svg id="hero-header__arrow">
+                    <use href="/src/images/icons.svg#icon-right-arrow-header"></use>
+                </svg>
+            </a>
+        </button>
     </div>
-</body>
+</div>
