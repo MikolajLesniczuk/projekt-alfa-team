@@ -1,0 +1,615 @@
+.hero-header {
+  width: 100vw;
+  height: 157.19vw;
+  background-color: $color-main-background;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 12vw;
+    top: 25.94vw;
+    z-index: 1;
+    content: '';
+    background-image: url(/src/images/Ellipse-header_x1.png);
+    background-size: contain;
+    width: 87.5vw;
+    height: 107.7vw;
+    display: block;
+  }
+  &__h1 {
+    position: absolute;
+    top: 60.31vw;
+    left: 6.25vw;
+    z-index: 3;
+    width: 68.13vw;
+    height: 33.12vw;
+    text-transform: uppercase;
+    font-family: $Font-secondary;
+    font-style: normal;
+    font-weight: 100;
+    text-align: left;
+
+    &--upperPart {
+      color: $color-white;
+      font-size: 8.125vw;
+      line-height: 9.38vw;
+      letter-spacing: 0.04em;
+    }
+    &--downPart {
+      color: $color-red;
+      font-size: 15vw;
+      line-height: 14.38vw;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__mainPicture {
+    position: absolute;
+    width: 53.44vw;
+    height: 128.13vw;
+    top: 28.75vw;
+    left: 36.56vw;
+    z-index: 2;
+    object-fit: cover;
+  }
+  &__statistic {
+    display: none;
+  }
+  .button {
+    font-family: $Font-primary;
+    font-size: 2.5vw;
+    font-weight: 400;
+    line-height: 3.13vw;
+    letter-spacing: 0em;
+    text-align: center;
+    &--link1 {
+      color: $color-white;
+    }
+    &--link2 {
+      color: $color-main-theme;
+    }
+
+    &--products {
+      width: 19.5vw;
+      height: 7.5vw;
+      position: absolute;
+      top: 99.38vw;
+      left: 6.25vw;
+      z-index: 2;
+      background-color: $color-main-theme;
+      color: $color-white;
+      border-radius: 6.25vw;
+      border: none;
+    }
+    &--products:hover {
+      background-color: $color-button-hover-main;
+      cursor: pointer;
+    }
+    &--how {
+      width: 25.88vw;
+      height: 7.5vw;
+      position: absolute;
+      top: 99.38vw;
+      left: 28.25vw;
+      z-index: 3;
+      background-color: $color-white;
+      color: $color-main-theme;
+      border-radius: 6.25vw;
+      border: none;
+    }
+    &--how:hover {
+      background-color: $color-button-hover-secondary;
+      cursor: pointer;
+    }
+    &--circle {
+      display: none;
+    }
+  }
+  &__loremIpsum {
+    display: none;
+  }
+}
+@include phone {
+  .hero-header {
+    width: 100%;
+    height: 753px;
+    background-color: $color-main-background;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 57.6px;
+      top: 124.51px;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/Ellipse-header_x1.png);
+      width: 420px;
+      height: 516.96px;
+      display: block;
+    }
+    &__h1 {
+      position: absolute;
+      top: 289.49px;
+      left: 30px;
+      z-index: 3;
+      width: 327.02px;
+      height: 158.98px;
+      text-transform: uppercase;
+      font-family: $Font-secondary;
+      font-style: normal;
+      font-weight: 100;
+      text-align: left;
+
+      &--upperPart {
+        color: $color-white;
+        font-size: 39px;
+        line-height: 45.02px;
+        letter-spacing: 0.04em;
+      }
+      &--downPart {
+        color: $color-red;
+        font-size: 72px;
+        line-height: 69.02px;
+        letter-spacing: 0em;
+      }
+    }
+
+    &__mainPicture {
+      position: absolute;
+      width: 256.51px;
+      height: 615.02px;
+      top: 138px;
+      left: 175.49px;
+      z-index: 2;
+      object-fit: fill;
+    }
+    &__statistic {
+      display: none;
+    }
+    .button {
+      font-family: $Font-primary;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15.02px;
+      letter-spacing: 0em;
+      text-align: center;
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
+
+      &--products {
+        width: 91.82px;
+        height: 36px;
+        position: absolute;
+        top: 477.02px;
+        left: 30px;
+        z-index: 2;
+        background-color: $color-main-theme;
+        color: $color-white;
+        border-radius: 30px;
+        border: none;
+      }
+      &--products:hover {
+        background-color: $color-button-hover-main;
+        cursor: pointer;
+      }
+      &--how {
+        width: 124.22px;
+        height: 36px;
+        position: absolute;
+        top: 477.02px;
+        left: 135.6px;
+        z-index: 3;
+        background-color: $color-white;
+        color: $color-main-theme;
+        border-radius: 30px;
+        border: none;
+      }
+      &--how:hover {
+        background-color: $color-button-hover-secondary;
+        cursor: pointer;
+      }
+      &--circle {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: 7px;
+        border-radius: 50%;
+        border: none;
+        background-image: url(/src/images/icons/arrowrightheader_x3.png);
+        object-fit: cover;
+      }
+    }
+    &__loremIpsum {
+      display: none;
+    }
+  }
+}
+@include tablet {
+  .hero-header {
+    min-width: 768px;
+    height: 399px;
+    margin: auto;
+    &::before {
+      position: absolute;
+      left: 307px;
+      top: 31px;
+      content: '';
+      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+      background-size: contain;
+      width: 324px;
+      height: 322px;
+      display: block;
+    }
+    &::after {
+      position: absolute;
+      left: 566px;
+      top: 266px;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/tastypic-tab.png);
+      object-fit: cover;
+      width: 168px;
+      height: 133px;
+      display: block;
+    }
+
+    &__h1 {
+      position: absolute;
+      top: 102px;
+      left: 34px;
+      width: 162px;
+      height: 80px;
+      &--upperPart {
+        font-size: 22px;
+        line-height: 25px;
+      }
+      &--downPart {
+        font-size: 34px;
+        line-height: 31px;
+      }
+      &::after {
+        position: absolute;
+        top: 143px;
+        z-index: 1;
+        content: '';
+        background-image: url(/src/images/jug-with-milk_tab_x1.png);
+        object-fit: cover;
+        width: 124px;
+        height: 126px;
+        display: block;
+      }
+    }
+    &__mainPicture {
+      width: 143px;
+      height: 336px;
+      top: 63px;
+      left: 378px;
+    }
+    &__statistic {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      width: 55px;
+      height: 108px;
+      margin-left: 690px;
+      padding-top: 96px;
+      position: relative;
+
+      &--number {
+        position: absolute;
+        font-family: $Font-secondary;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: $color-main-theme;
+        z-index: 2;
+      }
+      &--kind1 {
+        position: absolute;
+        top: 32px;
+        left: 10px;
+        font-family: $Font-primary;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $color-white;
+        text-align: right;
+      }
+      &--kind2 {
+        position: absolute;
+        top: 32px;
+        right: 20px;
+        width: 45px;
+        font-family: $Font-primary;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $color-white;
+        text-align: right;
+      }
+
+      &--paragraf1 {
+        width: 43px;
+        height: 44px;
+        margin-bottom: 43px;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 27px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          display: block;
+          z-index: 1;
+        }
+      }
+      &--paragraf2 {
+        width: 55px;
+        height: 43px;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 27px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+    .button {
+      font-family: $Font-primary;
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 10px;
+      letter-spacing: 0em;
+      text-align: center;
+      &--products {
+        width: 62.4px;
+        height: 24px;
+        position: absolute;
+        top: 220px;
+        left: 34px;
+        z-index: 1;
+      }
+
+      &--how {
+        width: 82.8px;
+        height: 24px;
+        position: absolute;
+        top: 220px;
+        left: 104.4px;
+        z-index: 3;
+        background-color: $color-white;
+        color: $color-main-theme;
+        border-radius: 20px;
+        border: none;
+      }
+      &--how:hover {
+        background-color: $color-button-hover-secondary;
+        cursor: pointer;
+      }
+      &--circle {
+        position: relative;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &__loremIpsum {
+      display: block;
+      width: 100px;
+      height: 48px;
+      position: absolute;
+      top: 292px;
+      left: 154px;
+      z-index: 2;
+
+      &--text {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $color-white;
+      }
+    }
+  }
+  #hero-header__arrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    fill: #d41443;
+    top: 3px;
+    right: 2px;
+  }
+}
+@include desktop {
+  .hero-header {
+    min-width: 1280px;
+    height: 665px;
+    margin: auto;
+    &::before {
+      position: absolute;
+      left: 475px;
+      top: 52px;
+      content: '';
+      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+      background-size: contain;
+      width: 538px;
+      height: 538px;
+      display: block;
+    }
+    &::after {
+      position: absolute;
+      left: 878px;
+      top: 433px;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/tastypic-tab-x2.png);
+      background-size: contain;
+      width: 293px;
+      height: 232px;
+      display: block;
+    }
+
+    &__h1 {
+      position: absolute;
+      top: 171px;
+      left: 115px;
+      width: 277px;
+      height: 137px;
+      &--upperPart {
+        font-size: 38px;
+        line-height: 44px;
+      }
+
+      &--downPart {
+        font-size: 58px;
+        line-height: 52px;
+      }
+      &::after {
+        position: absolute;
+        top: 258px;
+        left: -38px;
+        z-index: 1;
+        content: '';
+        background-image: url(/src/images/jug-with-milk_desk_x2.png);
+        background-size: contain;
+        width: 188px;
+        height: 191px;
+        display: block;
+      }
+    }
+    &__mainPicture {
+      width: 236px;
+      height: 557px;
+      top: 108px;
+      left: 594px;
+    }
+    &__statistic {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      width: 168px;
+      height: 108px;
+      margin-left: 1091px;
+      padding-top: 156px;
+      position: relative;
+
+      &--number {
+        font-size: 46px;
+        line-height: 53px;
+      }
+      &--kind1 {
+        top: 55px;
+        left: 18px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      &--kind2 {
+        top: 55px;
+        right: 1px;
+        width: 92px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      &--paragraf1 {
+        width: 72px;
+        height: 77px;
+        margin-bottom: 43px;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 42px;
+          top: -4px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 30px;
+          height: 30px;
+          display: block;
+          z-index: 1;
+        }
+      }
+      &--paragraf2 {
+        width: 55px;
+        height: 43px;
+        margin-top: 33px;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: -3px;
+          left: 42px;
+          content: '';
+          background-image: url(/src/images/statistic-dots_x2.png);
+          background-size: contain;
+          width: 30px;
+          height: 30px;
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+    .button {
+      font-size: 14px;
+      line-height: 18px;
+
+      &--products {
+        width: 104px;
+        height: 40px;
+        position: absolute;
+        top: 333px;
+        left: 115px;
+      }
+
+      &--how {
+        width: 138px;
+        height: 40px;
+        position: absolute;
+        top: 333px;
+        left: 234px;
+      }
+      &--how:hover {
+        background-color: $color-button-hover-secondary;
+        cursor: pointer;
+      }
+      &--circle {
+        position: relative;
+        width: 26px;
+        height: 26px;
+      }
+    }
+    &__loremIpsum {
+      width: 200px;
+      height: 78px;
+      top: 485px;
+      left: 295px;
+
+      &--text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  #hero-header__arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    fill: #d41443;
+    top: 3px;
+    right: 2px;
+  }
+}
