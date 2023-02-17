@@ -4,8 +4,18 @@
   align-items: center;
   padding: 121px 20px 98px 20px;
 
+  @include tablet {
+    padding: 120px 34px 112px 34px;
+  }
+  @include desktop {
+    padding: 127px 112px 119px 112px;
+  }
   &__head {
     margin-bottom: 152px;
+
+    @include desktop {
+      margin-bottom: 259px;
+    }
   }
   &__head-description {
     font-family: $Font-secondary;
@@ -16,6 +26,16 @@
     text-align: center;
     text-transform: uppercase;
     color: $color-secondary-theme;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include desktop {
+      font-size: 30px;
+      line-height: 34px;
+    }
   }
   &__head-title {
     font-family: $Font-secondary;
@@ -26,97 +46,243 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $color-main-theme;
+
+    @include tablet {
+      font-size: 48px;
+      line-height: 55px;
+    }
+
+    @include desktop {
+      font-size: 58px;
+      line-height: 66px;
+    }
   }
   &__wrapper {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      gap: 20px;
+      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      gap: 28px;
+    }
   }
   &__wrapper li:not(:first-child) {
     margin-top: 122px;
+
+    @include tablet {
+      margin-top: 0;
+    }
   }
   &__item {
+    position: relative;
+    top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 485px;
     width: 100%;
+    max-width: 480px;
     border-radius: 24px;
     padding: 0 40px;
+
+    @include tablet {
+      width: 220px;
+      padding: 0 10px;
+    }
+    @include desktop {
+      width: 329px;
+      height: 525px;
+      padding: 0 44px;
+    }
   }
+
   &__item--pink {
     background: $color-secondary-theme;
   }
 
   &__item--pink::before {
+    position: absolute;
+    top: -117px;
+    width: 249px;
+    height: 252px;
     content: '';
+    background-size: contain;
+    display: block;
     background-image: url(/src/images/products/secondice-mob.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    /* 
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-mob-x2.png);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-mob-x3.png);
+    }
+  }
+
+  @include tablet {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-tab.png);
+    }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--pink::before {
-        background-image: url('/src/images/products/secondice-mob-x2.png');
+        background-image: url(/src/images/products/secondice-tab-x2.png);
       }
     }
 
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
       .products__item--pink::before {
-        background-image: url('/src/images/products/secondice-mob-x3.png');
+        background-image: url(/src/images/products/secondice-tab-x3.png);
       }
-    }*/
+    }
   }
+
+  @include desktop {
+    .products__item--pink::before {
+      background-image: url(/src/images/products/secondice-desk.png);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .products__item--pink::before {
+        background-image: url(/src/images/products/secondice-desk-x2.png);
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .products__item--pink::before {
+        background-image: url(/src/images/products/secondice-desk-x3.png);
+      }
+    }
+  }
+
   &__item--coffee {
     background: $color-coffee;
   }
   &__item--coffee::before {
+    position: absolute;
+    top: -117px;
+    width: 249px;
+    height: 252px;
     content: '';
+    background-size: contain;
+    display: block;
     background-image: url(/src/images/products/coffeemob.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    /* 
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--coffee::before {
+      background-image: url(/src/images/products/coffeemob-x2.png);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--coffee::before {
+      background-image: url(/src/images/products/coffeemob-x3.png);
+    }
+  }
+
+  @include tablet {
+    .products__item--coffee::before {
+      background-image: url(/src/images/products/coffeetab.png);
+    }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--coffee::before {
-        background-image: url('/src/images/products/coffeemob-x2.png');
+        background-image: url(/src/images/products/coffeetab-x2.png);
       }
     }
 
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
       .products__item--coffee::before {
-        background-image: url('/src/images/products/coffeemob-x3.png');
+        background-image: url(/src/images/products/coffeetab-x3.png);
       }
-    }*/
+    }
   }
+
+  @include desktop {
+    .products__item--coffee::before {
+      background-image: url(/src/images/products/coffeedesk.png);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .products__item--coffee::before {
+        background-image: url(/src/images/products/coffeedesk-x2.png);
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .products__item--coffee::before {
+        background-image: url(/src/images/products/coffeedesk-x3.png);
+      }
+    }
+  }
+
   &__item--shake {
     background: $color-milkshake;
   }
   &__item--shake::before {
+    position: absolute;
+    top: -117px;
+    width: 249px;
+    height: 252px;
     content: '';
+    background-size: contain;
+    display: block;
     background-image: url(/src/images/products/shakemob.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    /* 
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products__item--shake::before {
+      background-image: url(/src/images/products/shakemob-x2.png);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .products__item--shake::before {
+      background-image: url(/src/images/products/shakemob-x3.png);
+    }
+  }
+
+  @include tablet {
+    .products__item--shake::before {
+      background-image: url(/src/images/products/shaketab.png);
+    }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .products__item--shake::before {
-        background-image: url('/src/images/products/shakemob-x2.png');
+        background-image: url(/src/images/products/shaketab-x2.png);
       }
     }
 
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
       .products__item--shake::before {
-        background-image: url('/src/images/products/shakemob-x3.png');
+        background-image: url(/src/images/products/shaketab-x3.png);
       }
-    } */
+    }
   }
+
+  @include desktop {
+    .products__item--shake::before {
+      background-image: url(/src/images/products/shakedesk.png);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .products__item--shake::before {
+        background-image: url(/src/images/products/shakedesk-x2.png);
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .products__item--shake::before {
+        background-image: url(/src/images/products/shakedesk-x3.png);
+      }
+    }
+  }
+
   &__item-caption {
     margin-top: 168px;
     margin-bottom: 54px;
@@ -125,15 +291,15 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $color-white;
+    padding-left: 15px;
   }
   &__item-caption::after {
     content: '...';
     top: 30px;
-    right: 60px;
+    right: 65px;
     position: relative;
   }
   &__item-description {
