@@ -11,7 +11,7 @@
     padding: 127px 112px 119px 112px;
   }
   &__head {
-    margin-bottom: 152px;
+    margin-bottom: 144px;
 
     @include desktop {
       margin-bottom: 259px;
@@ -58,7 +58,7 @@
     }
   }
   &__wrapper {
-    position: absolute;
+    // position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +74,7 @@
     }
   }
   &__wrapper li:not(:first-child) {
-    margin-top: 122px;
+    margin-top: 130px;
 
     @include tablet {
       margin-top: 0;
@@ -82,7 +82,6 @@
   }
   &__item {
     position: relative;
-    top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
