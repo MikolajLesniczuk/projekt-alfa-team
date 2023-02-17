@@ -17,5 +17,9 @@
   &__link {
     font-size: 16px;
     font-weight: 700;
+    &:hover,
+    &:focus {
+      color: $color-main-theme;
+    }
   }
 }
