@@ -1,32 +1,51 @@
 .advantages {
   background-color: $color-secondary-background;
-  padding-top: 39px;
-  padding-bottom: 59px;
-  padding-left: 19px;
-  display: flex;
+  padding-top: 38px;
+  padding-bottom: 97px;
+  padding-left: 20px;
+  @include tablet {
+    background-color: $color-white;
+    padding-top: 66px;
+    padding-bottom: 142px;
+  }
 }
 
 .advantages-list {
-  &__item {
-    margin-bottom: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  @include tablet {
+    gap: 60px;
   }
   &__icon {
     margin-bottom: 16px;
+    @include tablet {
+      margin-bottom: 36px;
+    }
   }
   &__title {
     color: $color-main-theme;
     font-family: $Font-secondary;
     font-size: 36px;
-    line-height: calc(41.22px / 36px);
+    line-height: 1.14;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    @include tablet {
+      font-size: 48px;
+      line-height: 1.53;
+    }
   }
   &__description {
     color: $color-black;
     font-size: 12px;
     font-weight: 700;
-    line-height: calc(20.4px / 12px);
+    line-height: 1.7;
     max-width: 230px;
     margin-top: 18px;
+    @include tablet {
+      max-width: 180px;
+      font-size: 14px;
+      line-height: 1.74;
+    }
   }
 }

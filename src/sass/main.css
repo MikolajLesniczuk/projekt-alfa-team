@@ -306,25 +306,49 @@ a {
 
 .advantages {
   background-color: #fff5f6;
-  padding-top: 39px;
-  padding-bottom: 59px;
-  padding-left: 19px;
-  display: flex;
+  padding-top: 38px;
+  padding-bottom: 97px;
+  padding-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .advantages {
+    background-color: #ffffff;
+    padding-top: 66px;
+    padding-bottom: 142px;
+  }
 }
 
-.advantages-list__item {
-  margin-bottom: 38px;
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+}
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    gap: 60px;
+  }
 }
 .advantages-list__icon {
   margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .advantages-list__icon {
+    margin-bottom: 36px;
+  }
 }
 .advantages-list__title {
   color: #d41443;
   font-family: "Titan One", sans-serif;
   font-size: 36px;
-  line-height: 1.145;
+  line-height: 1.14;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+@media screen and (min-width: 768px) {
+  .advantages-list__title {
+    font-size: 48px;
+    line-height: 1.53;
+  }
 }
 .advantages-list__description {
   color: #000000;
@@ -333,4 +357,9 @@ a {
   line-height: 1.7;
   max-width: 230px;
   margin-top: 18px;
+}
+@media screen and (min-width: 768px) {
+  .advantages-list__description {
+    max-width: 180px;
+  }
 }/*# sourceMappingURL=main.css.map */
