@@ -2,7 +2,7 @@
   padding-left: 50px;
   padding-right: 50px;
   &__background {
-    background-image: linear-gradient(to bottom, $color-white 15%, #fff5f6 15%);
+    background-image: linear-gradient(to bottom, $color-white 15%, $color-secondary-background 15%);
   }
 
   &__container {
@@ -62,7 +62,7 @@
       font-size: 12px;
       line-height: 18px;
       color: $color-small-text;
-      word-break: break-all;
+      word-break: normal;
       margin-top: 10px;
     }
 
@@ -138,5 +138,144 @@
     text-align: center;
     background: $color-white;
     color: $color-red;
+  }
+}
+
+@include tablet {
+  .contacts {
+    &__list {
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 30px;
+    }
+    &__container {
+      flex-basis: calc((100% - 60px) / 3);
+
+      &--description {
+        font-size: 14px;
+        line-height: 166%;
+      }
+
+      &--title {
+        font-size: 14px;
+        padding: 0 20px;
+      }
+
+      &--titleSecondary {
+        font-size: 14px;
+        padding: 0 20px;
+      }
+
+      &--time {
+        font-size: 14px;
+      }
+
+      &--open {
+        font-size: 14px;
+      }
+
+      &--city {
+        font-size: 14px;
+      }
+
+      &--name {
+        font-size: 14px;
+      }
+    }
+
+    &__group > a {
+      font-size: 14px;
+    }
+  }
+
+  .button__container {
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
+  .button__style {
+    &--location {
+      width: 198px;
+      padding-left: 40px;
+      padding-right: 35px;
+    }
+
+    &--franchise {
+      width: 180px;
+      padding-left: 39px;
+      padding-right: 39px;
+    }
+  }
+}
+
+@include desktop {
+  .contacts {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__container {
+      padding-left: 43px;
+      padding-top: 51px;
+      padding-bottom: 62px;
+      padding-right: 44px;
+
+      &--description {
+        font-size: 16px;
+        line-height: 183%;
+      }
+
+      &--title {
+        font-size: 16px;
+      }
+
+      &--titleSecondary {
+        font-size: 16px;
+      }
+
+      &--time {
+        font-size: 16px;
+      }
+
+      &--open {
+        font-size: 16px;
+      }
+
+      &--city {
+        font-size: 16px;
+      }
+
+      &--name {
+        font-size: 16px;
+      }
+    }
+    &__group > a {
+      font-size: 16px;
+      line-height: 183%;
+    }
+
+    &__list {
+      padding-left: 115px;
+      padding-right: 115px;
+      background-size: 1280px 382px;
+      background-image: url('../images/pinkdot-bg.png');
+      background-repeat: no-repeat;
+      background-position: 50% 54%;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .contacts {
+    &__list {
+      background-image: url('../images/pinkdot-bg-x2.png');
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 192dpi), (min-resolution: 3dppx) {
+  .contacts {
+    &__list {
+      background-image: url('../images/pinkdot-bg-x3.png');
+    }
   }
 }
