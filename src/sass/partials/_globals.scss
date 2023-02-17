@@ -32,9 +32,17 @@ a {
   &--white {
     background-color: $color-white;
     color: $color-main-theme;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-secondary;
+    }
   }
   &--main {
     background-color: $color-main-theme;
     color: $color-white;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-main;
+    }
   }
 }
