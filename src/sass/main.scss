@@ -2,10 +2,16 @@
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.
  */
-
 // Style dla pliku z przykładem HTML fragmentu
+@use './partials/mixin' as *;
 
 @import './partials/mixin';
 @import './partials/variables';
 @import './partials/globals';
+@import './partials/hero-header';
 @import './partials/customer-reviews';
+
+@import './partials/products';
+
+@import './partials/contacts';
+

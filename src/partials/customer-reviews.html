@@ -1,16 +1,85 @@
-<section class="customer-review"></section>
-<div class="container">
-  <img class="customer-review__customer" src="./images/people/testimonials.png" alt="Klient" />
-  <p class="customer-review__review">
-    Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla
-    quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
-  </p>
-  <p class="customer-review__signature">Emily, Los Angeles</p>
-  <div class="customer-review__slider">
-    <button class="customer-review__button" type="button">
-      <svg></svg>
-    </button>
-    <button class="customer-review__button" type="button"></button>
-    <button class="customer-review__button" type="button"></button>
+<section class="customer-review">
+  <div class="container">
+    <div id="Emily" class="tabcontent">
+      <img
+        class="customer-review__customer-image"
+        src="./images/people/testimonials.png"
+        srcset="./images/people/testimonials-x2.png 2x, ./images/people/testimonials-x3.png 3x"
+        alt="Klient"
+      />
+      <div class="customer-review__box">
+        <p class="customer-review__review">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
+          nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+      </div>
+      <p class="customer-review__signature">Emily, Los Angeles</p>
+    </div>
+    <div id="Anne" class="tabcontent">
+      <img
+        class="customer-review__customer-image"
+        src="./images/people/testimonials2.png"
+        srcset="./images/people/testimonials2-x2.png 2x, ./images/people/testimonials2-x3.png 3x"
+        alt="Klient"
+      />
+      <div class="customer-review__box">
+        <p class="customer-review__review">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
+          nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+      </div>
+      <p class="customer-review__signature">Anne, New York</p>
+    </div>
+    <div id="Jane" class="tabcontent">
+      <img
+        class="customer-review__customer-image"
+        src="./images/people/testimonials3.png"
+        srcset="./images/people/testimonials3-x2.png 2x, ./images/people/testimonials3-x3.png 3x"
+        alt="Klient"
+      />
+      <div class="customer-review__box">
+        <p class="customer-review__review">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
+          nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+      </div>
+      <p class="customer-review__signature">Jane, Chicago</p>
+    </div>
+    <div class="customer-review__slider">
+      <button
+        class="customer-review__button tablinks"
+        type="button"
+        onclick="openCustomer(event, 'Emily')"
+        id="defaultOpen"
+      ></button>
+      <button
+        class="customer-review__button tablinks"
+        type="button"
+        onclick="openCustomer(event, 'Anne')"
+      ></button>
+      <button
+        class="customer-review__button tablinks"
+        type="button"
+        onclick="openCustomer(event, 'Jane')"
+      ></button>
+    </div>
   </div>
-</div>
+  <script>
+    function openCustomer(evt, Name) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName('tabcontent');
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
+      }
+      tablinks = document.getElementsByClassName('tablinks');
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' active', '');
+      }
+      document.getElementById(Name).style.display = 'block';
+      evt.currentTarget.className += ' active';
+    }
+  </script>
+  <script>
+    document.getElementById('defaultOpen').click();
+  </script>
+</section>
