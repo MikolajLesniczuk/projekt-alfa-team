@@ -1,11 +1,12 @@
 .header {
   &__container {
     display: flex;
-    padding: 6px, 20px, 36px, 20px;
+    padding: 6px 20px 36px 20px;
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__nav-items {
     display: flex;
@@ -15,6 +16,7 @@
     display: block;
   }
   &__link {
+    color: $color-white;
     font-size: 16px;
     font-weight: 700;
     &:hover,
