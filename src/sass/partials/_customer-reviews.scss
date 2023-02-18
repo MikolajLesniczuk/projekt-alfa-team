@@ -1,5 +1,6 @@
 .customer-review {
   font-family: $Font-primary;
+  padding: 0 20px;
   &__customer-image {
     margin: 0 auto;
     width: 85px;
@@ -132,5 +133,4 @@
 }
 .tabcontent {
   display: none;
-  padding: 0 20px;
 }
