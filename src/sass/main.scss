@@ -3,11 +3,13 @@
  * Wszystkie partials podłączamy tutaj.
  */
 // Style dla pliku z przykładem HTML fragmentu
-@use './partials/mixin' as *;
-
 @import './partials/mixin';
 @import './partials/variables';
 @import './partials/globals';
+
+@import './partials/navigation';
+@import './partials/mobile-menu';
+
 @import './partials/hero-header';
+
 @import './partials/customer-reviews';
-@import './partials/footer';
