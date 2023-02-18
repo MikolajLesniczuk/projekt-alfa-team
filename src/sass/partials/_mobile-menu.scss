@@ -1,0 +1,46 @@
+.menu-container {
+  width: 100%;
+  background-color: $color-menu-bg;
+  padding: 60px, 21px;
+  &__btn {
+    width: 100%;
+  }
+  &__items {
+    display: flex;
+    gap: 23px;
+  }
+  &__item {
+    display: block;
+    border-top: 1px solid $color-menu-border;
+    border-bottom: 1px solid $color-menu-border;
+  }
+  &__link {
+    color: $color-white;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+      color: $color-main-theme;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+  &__btn {
+    fill: $color-main-theme;
+  }
+  &__btn-close {
+    color: $color-white;
+  }
+}
+@media (min-width: 1280px) {
+  .menu-toggle {
+    display: none;
+  }
+}

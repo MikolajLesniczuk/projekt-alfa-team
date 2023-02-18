@@ -1,0 +1,122 @@
+<button data-modal-open type="button">
+  Buy now
+  </button>
+  <div class="main-backdrop is-hidden" data-modal>
+    <div class="main__overlay">
+      <div class="form-border">
+      <h2 class="form-header">Order now!</h2>
+      <h3 class="form-heading">Choose</h3>
+      <form>
+        <p>Product:</p>
+        <label>
+          <input type="radio" name="product" value="iceCream" checked />
+          ice cream
+        </label>
+        <label>
+          <input type="radio" name="product" value="iceCoffee" />
+          ice coffee
+        </label>
+        <label>
+          <input type="radio" name="product" value="milkshake" />
+          milkshake
+        </label>
+        <label>
+          Amount:
+          <input type="number" name="amount" min="1" max="10" step="1" value="1" />
+        </label>
+        <label>
+          Size:
+          <input
+            type="range"
+            name="size"
+            value="200"
+            min="200"
+            max="1000"
+            step="200"
+          />
+        </label>
+        <p>Selected size (ml): <span class="js-selected-value">200</span></p> 
+      </form>
+  <form>
+    <p>Flavour:</p>
+    <label>
+      <input type="checkbox" name="flavour" value="pistachio" />
+      pistachio
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="matcha" />
+      matcha
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="mintChocolateChip" />
+      mint chocolate chip
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="coconut" />
+      coconut
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="lemonCheesecake" />
+      lemon cheesecake
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="banana" />
+      banana
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="cherry"/>
+      cherry
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="mocha" />
+      mocha
+    </label>
+    <label>
+      <input type="checkbox" name="flavour" value="cinnamon" />
+      cinnamon
+    </label>
+  </form>
+      </div>
+  
+      <form class="form">
+        <label class="form__items">
+          <p class="form__label">Name</p>
+          <div class="form__input">
+            <input type="text" name="username" placeholder="Name" class="form__highlight" />
+          </div>
+        </label>
+        <label class="form__items">
+          <p class="form__label">Surname</p>
+          <div class="form__input">
+            <input type="text" name="usersurname"  placeholder="Surname" class="form__highlight" />
+          </div>
+        </label>
+        <label class="form__items">
+          <p class="form__label">Phone number</p>
+          <div class="form__input">
+            <input type="tel" name="phoneNumber"  placeholder="+48 111 111 111"  class="form__highlight" />
+          </div>
+        </label>
+        <label class="form__items">
+          <p class="form__label">E-mail</p>
+          <div class="form__input">
+            <input
+              type="email"
+              name="emailAddress"
+              placeholder="placeholder@gmail.com" 
+              class="form__highlight"
+            />
+          </div>
+        </label>
+        <button type="submit" class="form__button">
+          <span class="form__delivery">TO DELIVERY DETAILS</span>
+        </button>
+        <button type="button" class="form__close" data-modal-close>
+          <svg class="close" width="11" height="11">
+            <use href="./images/symbol-defs.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
