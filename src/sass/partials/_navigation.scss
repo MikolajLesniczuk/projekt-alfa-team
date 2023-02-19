@@ -6,23 +6,19 @@
     width: 1280px;
     padding: 38px 115px 0 46px;
   }
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__nav-items {
-    @include tablet-max {
-      display: none;
-    }
     position: relative;
     display: flex;
-    gap: 23px;
     z-index: 2;
-    @include desktop {
-      margin-left: 110px;
-      gap: 35px;
+    margin-left: 110px;
+    gap: 35px;
+    @include desktop-max {
+      display: none;
     }
   }
   &__nav-item {
@@ -40,5 +36,18 @@
   &__btn {
     font-size: 16px;
     font-weight: 600;
+    @include tablet-max {
+      display: none;
+    }
+  }
+}
+
+.btn-arrow {
+  margin-left: 1em;
+  @include tablet {
+    margin-left: 0.875em;
+  }
+  @include desktop {
+    margin-left: 0.75em;
   }
 }

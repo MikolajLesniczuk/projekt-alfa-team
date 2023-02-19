@@ -27,3 +27,8 @@ $desktop: 1280px;
     @content;
   }
 }
+@mixin desktop-max {
+  @media screen and (max-width: #{$desktop}) {
+    @content;
+  }
+}
