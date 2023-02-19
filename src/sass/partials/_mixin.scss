@@ -17,3 +17,13 @@ $desktop: 1280px;
     @content;
   }
 }
+@mixin phone-max {
+  @media screen and (max-width: #{$phone}) {
+    @content;
+  }
+}
+@mixin tablet-max {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
