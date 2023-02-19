@@ -15,7 +15,7 @@
     height: 107.7vw;
     display: block;
   }
-  &__h1 {
+  &__titlle {
     position: absolute;
     top: 60.31vw;
     left: 6.25vw;
@@ -75,6 +75,7 @@
       top: 99.38vw;
       left: 6.25vw;
       z-index: 2;
+      padding: 0 5.6vw;
     }
 
     &--white {
@@ -84,6 +85,7 @@
       top: 99.38vw;
       left: 28.25vw;
       z-index: 3;
+      padding: 0 5.6vw;
     }
 
     &--circle {
@@ -363,6 +365,7 @@
         top: 220px;
         left: 34px;
         z-index: 1;
+        padding: 0 18px;
       }
 
       &--white {
@@ -372,6 +375,7 @@
         top: 220px;
         left: 104.4px;
         z-index: 3;
+        padding: 0 18px;
       }
     }
     &__loremIpsum {
