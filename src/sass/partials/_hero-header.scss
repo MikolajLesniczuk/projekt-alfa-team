@@ -57,13 +57,16 @@
   &__statistic {
     display: none;
   }
-  .button {
+  .hero__btn {
     font-family: $Font-primary;
     font-size: 2.5vw;
     font-weight: 400;
     line-height: 3.13vw;
     letter-spacing: 0em;
     text-align: center;
+    @include phone-max {
+      padding: 0 48px;
+    }
     &--link1 {
       color: $color-white;
     }
@@ -157,7 +160,7 @@
     &__statistic {
       display: none;
     }
-    .button {
+    .hero__btn {
       font-family: $Font-primary;
       font-size: 12px;
       font-weight: 400;
@@ -361,7 +364,7 @@
         }
       }
     }
-    .button {
+    .hero__btn {
       font-family: $Font-primary;
       font-size: 8px;
       font-weight: 400;
@@ -522,7 +525,7 @@
         }
       }
     }
-    .button {
+    .hero__btn {
       font-size: 14px;
       line-height: 18px;
 

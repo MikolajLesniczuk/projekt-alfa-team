@@ -1,3 +1,4 @@
+
 <section class=" container hero-header">
     <h1>
         <span class="hero-header__title hero-header__title--upperPart">ice cream made with</span>
@@ -10,25 +11,115 @@
         <button type="button" class="button button--white">
             <a class="button--link2" href="#how-its-made">How it's made?</a>
         </button>
+
+<div class="container hero-header">
+  <div class="header">
+    <div class="header__wrapper">
+      <a href="index.html"
+        ><img
+          width="199px"
+          src="/src/images/logo.png"
+          alt="logo of the icecream company"
+          srcset="./images/logo-x2.png 2x, ./images/logo-x3.png 3x"
+      /></a>
+      <button
+        type="button"
+        class="menu-toggle menu-toggle__btn js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        a
+        <svg width="24" height="24" viewBox="0 0 20 20">
+          <use href="/src/images/icons.svg#icon-menu_icon"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a class="header__link" href="index.html">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__link" href="#about-us">About us</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__link" href="#how-its-made">How it's made?</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__link" href="#our-products">Our products</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div class="hero-header__statistic">
-        <div class="hero-header__statistic--paragraf1">
-            <span class="hero-header__statistic--number">16</span>
-            <span class="hero-header__statistic--kind1">Cafes</span>
-        </div>
-        <div class="hero-header__statistic--paragraf2">
-            <span class="hero-header__statistic--number">23</span>
-            <span class="hero-header__statistic--kind2">food trucks</span>
-        </div>
+    <button type="button" class="button button--white header__btn">
+      Buy now<span class="btn-arrow">&#10095;</span>
+    </button>
+  </div>
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle menu-toggle__btn-close js-close-menu">&#10006;</button>
+    <div class="menu-container__btn-wrapper">
+      <button type="button" class="button button--white menu-container__btn">
+        Buy now<span class="btn-arrow">&#10095;</span>
+      </button>
 
     </div>
+    <nav>
+      <ul class="menu-container__items">
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="index.html">Home</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="#about-us">About us</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="#how-its-made">How it's made?</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="#our-products">Our products</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hero-header__h1">
+    <h1>
+      <span class="hero-header__h1--upperPart">ice cream made with</span>
+      <span class="hero-header__h1--downPart">passion</span>
+    </h1>
+  </div>
+  <div class="hero-header__buttons">
+    <button type="button" class="button hero__btn--products">
+      <a class="button--link1" href="#our-products">Products</a>
+    </button>
+    <button type="button" class="button hero__btn--how">
+      <a class="hero__btn--link2" href="#how-its-made">How it's made?</a>
+    </button>
+  </div>
+  <div class="hero-header__statistic">
+    <div class="hero-header__statistic--paragraf1">
+      <span class="hero-header__statistic--number">16</span>
+      <span class="hero-header__statistic--kind1">Cafes</span>
+    </div>
+    <div class="hero-header__statistic--paragraf2">
+      <span class="hero-header__statistic--number">23</span>
+      <span class="hero-header__statistic--kind2">food trucks</span>
+    </div>
+  </div>
 
-    <img class="hero-header__mainPicture" alt="The big colorfull icecream" src="/src/images/products/mainice-mob.png"
-        srcset="/src/images/products/mainice-mob-x2.png
+  <img
+    class="hero-header__mainPicture"
+    alt="The big colorfull icecream"
+    src="/src/images/products/mainice-mob.png"
+    srcset="/src/images/products/mainice-mob-x2.png
                     /src/images/products/mainice-mob-x3.png
                      /src/images/products/mainice-mob.png 320w,
                      /src/images/products/mainice-mob-x2.png 640w
                      /src/images/products/mainice-mob-x3.png 960w"
+
         sizes="(min-width: 748px) 320px, (min-width: 480px) 640px " />
     <div class="hero-header__loremIpsum">
         <p class="hero-header__loremIpsum--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -43,3 +134,4 @@
         </button>
     </div>
 </section>
+
