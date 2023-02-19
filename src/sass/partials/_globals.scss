@@ -29,10 +29,14 @@ a {
   }
 }
 .button {
-  min-height: 24px;
+  max-height: 44px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
+  padding: 0 37px;
+  @include phone-max {
+    padding: 0 48px;
+  }
   &--white {
     background-color: $color-white;
     color: $color-main-theme;

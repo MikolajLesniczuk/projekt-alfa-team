@@ -1,89 +1,81 @@
-.footer__button {
-  display: block;
-  background-color: #d41443;
-  border: 0;
-  padding-left: 17px;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-  border-radius: 22px;
-  height: 44px;
-  text-align: center;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: beige;
-  margin-top: 10px;
-  width: 161px;
-}
-
-.footer__titel-ice {
+.footer__title {
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 1;
   text-transform: uppercase;
   color: $color-main-background;
   font-family: $Font-secondary;
-  padding-left: 22px;
-}
-
-.footer__titel-passion {
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 39px;
-  text-transform: uppercase;
-  color: rgba(212, 20, 67, 1);
-  font-family: $Font-secondary;
   padding-left: 20px;
 }
-.main-icon-item-box {
+
+.footer__title--down {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-main-theme;
+  font-family: $Font-secondary;
+  padding-left: 25px;
+}
+.footer__social-list {
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   padding-bottom: 30px;
   cursor: pointer;
+  padding-bottom: 43px;
 }
 
-.main-icon-item {
+.footer__social-list--itemm {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   background-color: $color-main-background;
   fill: #ffffff;
-  padding-left: 6;
-  padding-top: 6;
+  padding-left: 6px;
+  padding-top: 6px;
   margin: 25px;
-  background-image: linear-gradient(rgba(245, 240, 240, 0.63), rgba(222, 222, 226, 0.4));
+  background-image: linear-gradient(rgba(247, 241, 241, 0.089), rgba(254, 254, 255, 0));
 }
-.main-icon-item:focus,
-.main-icon-item:hover {
+.footer__social-list--itemm:focus,
+.footer__social-list--itemm:hover {
   fill: #ffffff;
-  background-color: #1274c5;
+  background-color: $color-button-hover-main;
 }
 
-.main-icon:hover,
-.main-icon:focus {
-  background-color: #2196f3;
-  color: #fff;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer__titet-kontakt {
-  color: rgba(0, 0, 0, 1);
+.footer__kontakt {
+  color: $color-black;
   font-family: $Font-primary;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
 }
-.footer__titet-number {
-  color: #d41443;
-  font-weight: bold;
+.footer__number {
+  color: $color-main-theme;
+  size: 14px;
+  font-weight: 700;
 }
-.footer__titel-end {
-  color: rgba(144, 126, 130, 1);
-  font-weight: bold;
+.title__foot {
+  color: $color-small-text;
+  size: 14px;
+  display: flex;
+  padding-top: 22px;
+  border-top: 2 solid $color-testimonials-quote;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 25px;
+  font-weight: 700;
+}
+.footer__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  padding-bottom: 25px;
+  @include tablet {
+    padding: 0px 20px 175px;
+    justify-content: right;
+  }
 }
