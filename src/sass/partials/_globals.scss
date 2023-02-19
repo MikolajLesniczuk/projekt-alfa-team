@@ -55,4 +55,17 @@ a {
       cursor: pointer;
     }
   }
+  &--circle {
+    background-color: $color-white;
+    color: $color-main-theme;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 50%;
+    border: none;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-secondary;
+      cursor: pointer;
+    }
+  }
 }
