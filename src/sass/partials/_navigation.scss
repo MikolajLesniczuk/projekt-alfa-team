@@ -1,16 +1,29 @@
 .header {
-  &__container {
-    display: flex;
-    padding: 6px 20px 36px 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 20px 36px 20px;
+  @include desktop {
+    width: 1280px;
+    padding: 38px 115px 0 46px;
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__nav-items {
+    @include tablet-max {
+      display: none;
+    }
+    position: relative;
     display: flex;
     gap: 23px;
+    z-index: 2;
+    @include desktop {
+      margin-left: 110px;
+      gap: 35px;
+    }
   }
   &__nav-item {
     display: block;
@@ -23,5 +36,9 @@
     &:focus {
       color: $color-main-theme;
     }
+  }
+  &__btn {
+    font-size: 16px;
+    font-weight: 600;
   }
 }
