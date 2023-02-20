@@ -6,16 +6,22 @@
   color: $color-main-background;
   font-family: $Font-secondary;
   padding-left: 20px;
+  padding-top: 50px;
+  width: 472px;
+  height: 34px;
 }
 
 .footer__title--down {
   font-weight: 400;
   font-size: 34px;
-  line-height: 1;
+  line-height: 1.14;
   text-transform: uppercase;
   color: $color-main-theme;
   font-family: $Font-secondary;
   padding-left: 25px;
+  padding-top: 50px;
+  width: 474px;
+  height: 66px;
 }
 .footer__social-list {
   list-style-type: none;
@@ -25,8 +31,14 @@
   padding-bottom: 30px;
   cursor: pointer;
   padding-bottom: 43px;
+  @include tablet {
+    padding-left: 50px;
+    padding-bottom: 10px;
+    @include desktop {
+      padding-left: 430px;
+    }
+  }
 }
-
 .footer__social-list--itemm {
   width: 32px;
   height: 32px;
@@ -38,6 +50,7 @@
   margin: 25px;
   background-image: linear-gradient(rgba(247, 241, 241, 0.089), rgba(254, 254, 255, 0));
 }
+
 .footer__social-list--itemm:focus,
 .footer__social-list--itemm:hover {
   fill: #ffffff;
@@ -51,31 +64,55 @@
   align-items: center;
   justify-content: center;
 }
+
 .footer__number {
   color: $color-main-theme;
   size: 14px;
   font-weight: 700;
+
+  @include desktop {
+    padding-right: 125px;
+  }
 }
-.title__foot {
+.footer__foot {
   color: $color-small-text;
   size: 14px;
-  display: flex;
+  display: flexbox;
   padding-top: 22px;
-  border-top: 2 solid $color-testimonials-quote;
+  border-top: 2px solid $color-testimonials-quote;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   display: flex;
   padding-bottom: 25px;
   font-weight: 700;
+  width: 150 px;
+  height: 42px;
+  display: flex;
+  align-content: center;
 }
 .footer__footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   padding-left: 40px;
   padding-bottom: 25px;
   @include tablet {
-    padding: 0px 20px 175px;
-    justify-content: right;
+    padding: 0px 10px 175px;
+  }
+}
+.fufu {
+  display: inline-flexbox;
+}
+br {
+  @include desktop {
+    display: none;
+  }
+}
+.did {
+  @include tablet {
+    position: absolute;
+    padding-top: 30px;
+    padding-bottom: 91px;
   }
 }
