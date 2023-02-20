@@ -321,12 +321,12 @@
 
   &__overlay {
     z-index: -1;
-    color: $color-white;
+    color: $color-secondary-theme;
     position: relative;
     top: -105px;
-    width: 110%;
-    height: 150px;
-    padding: 25px 15px;
+    width: 122%;
+    height: 180px;
+    padding: 0 15px 50px 15px;
     border-radius: 24px;
     background-color: $color-secondary-theme;
     text-align: center;
@@ -339,9 +339,22 @@
     line-height: 21px;
   }
 
+  @include tablet {
+    .products__overlay {
+      width: 220px;
+    }
+  }
+
+  @include desktop {
+    .products__overlay {
+      width: 329px;
+    }
+  }
+
   &__item:hover > .products__overlay,
   &__item:focus > .products__overlay,
   &__item:active > .products__overlay {
+    animation-delay: 800ms;
     animation-name: productsOverlaydown;
     animation-duration: 2500ms;
     animation-fill-mode: forwards;
@@ -356,8 +369,8 @@
     animation-fill-mode: forwards;
     animation-direction: alternate;
   }
-
   &__overlay--coffee {
+    width: 110%;
     background-color: $color-coffee;
     animation-name: productsOverlay;
     animation-duration: 2500ms;
@@ -403,6 +416,7 @@
     transform: translate(0, 0);
   }
   100% {
+    color: $color-white;
     transform: translate(0, 120px);
   }
 }
