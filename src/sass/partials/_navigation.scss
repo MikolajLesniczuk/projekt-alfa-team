@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 20px 36px 20px;
+  @include tablet {
+    // width: 1280px;
+    padding: 38px 115px 0 46px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav-items {
+    position: relative;
+    display: flex;
+    z-index: 2;
+    margin-left: 110px;
+    gap: 35px;
+    @include desktop-max {
+      display: none;
+    }
+  }
+  &__nav-item {
+    display: block;
+  }
+  &__link {
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+      color: $color-main-theme;
+    }
+  }
+  &__btn {
+    font-size: 16px;
+    font-weight: 600;
+    @include tablet-max {
+      display: none;
+    }
+  }
+}
+
+.btn-arrow {
+  margin-left: 1em;
+  @include tablet {
+    margin-left: 0.875em;
+  }
+  @include desktop {
+    margin-left: 0.75em;
+  }
+}

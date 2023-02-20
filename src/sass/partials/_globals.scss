@@ -21,7 +21,6 @@ a {
   margin: 0 auto;
   @include tablet {
     max-width: 768px;
-
     margin: 0 auto;
   }
   @include desktop {
@@ -30,25 +29,41 @@ a {
   }
 }
 .button {
-  min-height: 40px;
+  max-height: 44px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
+  padding: 0 37px;
+
   &--white {
     background-color: $color-white;
     color: $color-main-theme;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-secondary;
+      cursor: pointer;
+    }
   }
   &--main {
     background-color: $color-main-theme;
     color: $color-white;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-main;
+      cursor: pointer;
+    }
+  }
+  &--circle {
+    background-color: $color-white;
+    color: $color-main-theme;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 50%;
+    border: none;
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-secondary;
+      cursor: pointer;
+    }
   }
 }
-
-    margin: 0 auto;
-  }
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
-}
-
