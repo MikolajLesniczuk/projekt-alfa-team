@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,15 +32,16 @@
   </head>
   <body>
     <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
-    <!-- <include src="./partials/example.html"></include> -->
 
     <!-- Tutaj dołączajcie swoje include swoich sekcji  -->
 
     <include src="./partials/navigation.html"></include>
-
     <include src="./partials/hero-header.html"></include>
-    <include src="./partials/products.html"></include>
+    <include src="./partials/products.html"></include>    
+    <include src="./partials/form.html"></include>   
+
     <include src="./partials/howitsmade.html"></include>
+
     <include src="./partials/advantages.html"></include>
     <include src="./partials/gallery.html"></include>
     <include src="./partials/customer-reviews.html"></include>
@@ -50,6 +51,10 @@
 
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
     <script src="./index.js" type="module"></script>
+
+    <script src="./modal.js"></script>
+    <script src="./form.js"></script>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
@@ -57,6 +62,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="./mobile-menu.js"></script>
-    <script src="./modal.js"></script>
+
   </body>
+
 </html>
