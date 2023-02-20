@@ -2,19 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 121px 20px 98px 20px;
+  justify-content: center;
+  padding: 121px 20px;
 
   @include tablet {
-    padding: 120px 34px 112px 34px;
+    padding: 120px 34px;
   }
   @include desktop {
-    padding: 127px 112px 119px 112px;
+    padding: 127px 112px;
   }
   &__head {
-    margin-bottom: 144px;
+    margin-bottom: 152px;
 
     @include desktop {
-      margin-bottom: 259px;
+      margin-bottom: 160px;
     }
   }
   &__head-description {
@@ -58,23 +59,26 @@
     }
   }
   &__wrapper {
-    // position: absolute;
+    top: -260px;
+    left: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     @include tablet {
       gap: 20px;
       flex-direction: row;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
     @include desktop {
       gap: 28px;
     }
   }
   &__wrapper li:not(:first-child) {
-    margin-top: 130px;
+    margin-top: 200px;
 
     @include tablet {
       margin-top: 0;
@@ -82,10 +86,11 @@
   }
   &__item {
     position: relative;
+    top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 485px;
+    height: 465px;
     width: 100%;
     max-width: 480px;
     border-radius: 24px;
@@ -93,13 +98,44 @@
 
     @include tablet {
       width: 220px;
+      height: 495px;
       padding: 0 10px;
     }
     @include desktop {
       width: 329px;
-      height: 525px;
+      height: 495px;
       padding: 0 44px;
     }
+  }
+  &__item-caption {
+    margin-top: 168px;
+    margin-bottom: 54px;
+    font-family: $Font-secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-white;
+    padding-left: 15px;
+  }
+  &__item-caption::after {
+    content: '...';
+    top: 30px;
+    right: 65px;
+    position: relative;
+  }
+  &__item-description {
+    font-family: $Font-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-white;
+    margin-bottom: 30px;
   }
 
   &__item--pink {
@@ -107,6 +143,7 @@
   }
 
   &__item--pink::before {
+    z-index: 999;
     position: absolute;
     top: -117px;
     width: 249px;
@@ -282,34 +319,104 @@
     }
   }
 
-  &__item-caption {
-    margin-top: 168px;
-    margin-bottom: 54px;
-    font-family: $Font-secondary;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $color-white;
-    padding-left: 15px;
-  }
-  &__item-caption::after {
-    content: '...';
-    top: 30px;
-    right: 65px;
+  &__overlay {
+    z-index: -1;
+    color: $color-secondary-theme;
     position: relative;
-  }
-  &__item-description {
-    font-family: $Font-primary;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
+    top: -105px;
+    width: 122%;
+    height: 180px;
+    padding: 0 15px 50px 15px;
+    border-radius: 24px;
+    background-color: $color-secondary-theme;
     text-align: center;
     letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    font-family: Dm sans, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+  }
+
+  @include tablet {
+    .products__overlay {
+      width: 220px;
+    }
+  }
+
+  @include desktop {
+    .products__overlay {
+      width: 329px;
+    }
+  }
+
+  &__item:hover > .products__overlay,
+  &__item:focus > .products__overlay,
+  &__item:active > .products__overlay {
+    animation-delay: 800ms;
+    animation-name: productsOverlaydown;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  &__item:active {
+    animation-name: productsOverlay;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+  &__overlay--coffee {
+    width: 110%;
+    background-color: $color-coffee;
+    animation-name: productsOverlay;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+  &__item:hover > .products__overlay--coffee,
+  &__item:focus > .products__overlay-coffee,
+  &__item:active > .products__overlay-coffee {
+    animation-name: productsOverlaydown;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+  &__overlay--shake {
+    background-color: $color-milkshake;
+    animation-name: productsOverlay;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+  &__item:hover > .products__overlay--shake,
+  &__item:focus > .products__overlay-shake,
+  &__item:active > .products__overlay-shake {
+    animation-name: productsOverlaydown;
+    animation-duration: 2500ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes productsOverlay {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    margin-top: 100px;
+    transform: translate(0, -130px);
+  }
+}
+@keyframes productsOverlaydown {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
     color: $color-white;
-    margin-bottom: 30px;
+    transform: translate(0, 120px);
   }
 }
