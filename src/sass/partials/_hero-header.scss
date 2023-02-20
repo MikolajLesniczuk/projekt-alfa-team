@@ -1,5 +1,5 @@
 .hero-header {
-  width: 100vw;
+  width: 100%;
   height: 157.19vw;
   background-color: $color-main-background;
   position: relative;
@@ -15,7 +15,7 @@
     height: 107.7vw;
     display: block;
   }
-  &__h1 {
+  &__title {
     position: absolute;
     top: 60.31vw;
     left: 6.25vw;
@@ -27,6 +27,7 @@
     font-style: normal;
     font-weight: 100;
     text-align: left;
+    animation: fade-in 2s linear;
 
     &--upperPart {
       color: $color-white;
@@ -39,6 +40,7 @@
       font-size: 15vw;
       line-height: 14.38vw;
       letter-spacing: 0em;
+      top: 78vw;
     }
   }
 
@@ -50,17 +52,21 @@
     left: 36.56vw;
     z-index: 2;
     object-fit: cover;
+    animation: fade-in 2s linear;
   }
   &__statistic {
     display: none;
   }
-  .button {
+  .hero__btn {
     font-family: $Font-primary;
     font-size: 2.5vw;
     font-weight: 400;
     line-height: 3.13vw;
     letter-spacing: 0em;
     text-align: center;
+    @include phone-max {
+      padding: 0 48px;
+    }
     &--link1 {
       color: $color-white;
     }
@@ -68,38 +74,26 @@
       color: $color-main-theme;
     }
 
-    &--products {
+    &--main {
       width: 19.5vw;
       height: 7.5vw;
       position: absolute;
       top: 99.38vw;
       left: 6.25vw;
       z-index: 2;
-      background-color: $color-main-theme;
-      color: $color-white;
-      border-radius: 6.25vw;
-      border: none;
+      padding: 0 4.2vw;
     }
-    &--products:hover {
-      background-color: $color-button-hover-main;
-      cursor: pointer;
-    }
-    &--how {
+
+    &--white {
       width: 25.88vw;
       height: 7.5vw;
       position: absolute;
       top: 99.38vw;
       left: 28.25vw;
       z-index: 3;
-      background-color: $color-white;
-      color: $color-main-theme;
-      border-radius: 6.25vw;
-      border: none;
+      padding: 0 4.2vw;
     }
-    &--how:hover {
-      background-color: $color-button-hover-secondary;
-      cursor: pointer;
-    }
+
     &--circle {
       display: none;
     }
@@ -108,7 +102,7 @@
     display: none;
   }
 }
-@include phone {
+@media screen and (min-width: 480px) {
   .hero-header {
     width: 100%;
     height: 753px;
@@ -125,7 +119,7 @@
       height: 516.96px;
       display: block;
     }
-    &__h1 {
+    &__title {
       position: absolute;
       top: 289.49px;
       left: 30px;
@@ -145,6 +139,7 @@
         letter-spacing: 0.04em;
       }
       &--downPart {
+        top: 374.4px;
         color: $color-red;
         font-size: 72px;
         line-height: 69.02px;
@@ -161,10 +156,11 @@
       z-index: 2;
       object-fit: fill;
     }
+
     &__statistic {
       display: none;
     }
-    .button {
+    .hero__btn {
       font-family: $Font-primary;
       font-size: 12px;
       font-weight: 400;
@@ -178,7 +174,7 @@
         color: $color-main-theme;
       }
 
-      &--products {
+      &--main {
         width: 91.82px;
         height: 36px;
         position: absolute;
@@ -189,12 +185,10 @@
         color: $color-white;
         border-radius: 30px;
         border: none;
+        padding: 0 20px;
       }
-      &--products:hover {
-        background-color: $color-button-hover-main;
-        cursor: pointer;
-      }
-      &--how {
+
+      &--white {
         width: 124.22px;
         height: 36px;
         position: absolute;
@@ -205,11 +199,9 @@
         color: $color-main-theme;
         border-radius: 30px;
         border: none;
+        padding: 0 20px;
       }
-      &--how:hover {
-        background-color: $color-button-hover-secondary;
-        cursor: pointer;
-      }
+
       &--circle {
         display: block;
         width: 16px;
@@ -253,9 +245,11 @@
       width: 168px;
       height: 133px;
       display: block;
+      opacity: 0;
+      animation: rotate 3s forwards;
     }
 
-    &__h1 {
+    &__title {
       position: absolute;
       top: 102px;
       left: 34px;
@@ -266,19 +260,21 @@
         line-height: 25px;
       }
       &--downPart {
+        top: 155px;
         font-size: 34px;
         line-height: 31px;
-      }
-      &::after {
-        position: absolute;
-        top: 143px;
-        z-index: 1;
-        content: '';
-        background-image: url(/src/images/jug-with-milk_tab_x1.png);
-        object-fit: cover;
-        width: 124px;
-        height: 126px;
-        display: block;
+        &::after {
+          position: absolute;
+          top: 93px;
+          z-index: 1;
+          content: '';
+          background-image: url(/src/images/jug-with-milk_tab_x1.png);
+          background-size: contain;
+          width: 124px;
+          height: 126px;
+          display: block;
+          animation: rotate 3s alternate forwards;
+        }
       }
     }
     &__mainPicture {
@@ -318,7 +314,6 @@
         letter-spacing: 0em;
         text-align: right;
         color: $color-white;
-        text-align: right;
       }
       &--kind2 {
         position: absolute;
@@ -344,7 +339,7 @@
           position: absolute;
           left: 27px;
           content: '';
-          background-image: url(/src/images/statistic-dots_x2.png);
+          background-image: url(/src/images/statistic-dots_x1.png);
           background-size: contain;
           width: 16px;
           height: 16px;
@@ -369,42 +364,39 @@
         }
       }
     }
-    .button {
+    .hero__btn {
       font-family: $Font-primary;
       font-size: 8px;
       font-weight: 400;
       line-height: 10px;
       letter-spacing: 0em;
       text-align: center;
-      &--products {
+      &--main {
         width: 62.4px;
         height: 24px;
         position: absolute;
         top: 220px;
         left: 34px;
         z-index: 1;
+        padding: 0 10px;
       }
 
-      &--how {
+      &--white {
         width: 82.8px;
         height: 24px;
         position: absolute;
         top: 220px;
         left: 104.4px;
         z-index: 3;
-        background-color: $color-white;
-        color: $color-main-theme;
-        border-radius: 20px;
-        border: none;
-      }
-      &--how:hover {
-        background-color: $color-button-hover-secondary;
-        cursor: pointer;
+        padding: 0 12px;
       }
       &--circle {
+        display: block;
         position: relative;
+        padding: 0;
         width: 18px;
         height: 18px;
+        margin-top: 7px;
       }
     }
     &__loremIpsum {
@@ -428,11 +420,11 @@
   }
   #hero-header__arrow {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 7px;
     fill: #d41443;
-    top: 3px;
-    right: 2px;
+    top: 5px;
+    right: 3.5px;
   }
 }
 @include desktop {
@@ -441,31 +433,20 @@
     height: 665px;
     margin: auto;
     &::before {
-      position: absolute;
       left: 475px;
       top: 52px;
-      content: '';
-      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
-      background-size: contain;
       width: 538px;
       height: 538px;
-      display: block;
     }
     &::after {
-      position: absolute;
       left: 878px;
       top: 433px;
-      z-index: 1;
-      content: '';
       background-image: url(/src/images/tastypic-tab-x2.png);
-      background-size: contain;
       width: 293px;
       height: 232px;
-      display: block;
     }
 
-    &__h1 {
-      position: absolute;
+    &__title {
       top: 171px;
       left: 115px;
       width: 277px;
@@ -476,20 +457,17 @@
       }
 
       &--downPart {
+        top: 260px;
         font-size: 58px;
         line-height: 52px;
-      }
-      &::after {
-        position: absolute;
-        top: 258px;
-        left: -38px;
-        z-index: 1;
-        content: '';
-        background-image: url(/src/images/jug-with-milk_desk_x2.png);
-        background-size: contain;
-        width: 188px;
-        height: 191px;
-        display: block;
+
+        &::after {
+          top: 121px;
+          left: -38px;
+          background-image: url(/src/images/jug-with-milk_desk_x2.png);
+          width: 187px;
+          height: 191px;
+        }
       }
     }
     &__mainPicture {
@@ -499,14 +477,10 @@
       left: 594px;
     }
     &__statistic {
-      display: flex;
-      flex-direction: column;
-      row-gap: 14px;
       width: 168px;
       height: 108px;
       margin-left: 1091px;
       padding-top: 156px;
-      position: relative;
 
       &--number {
         font-size: 46px;
@@ -530,66 +504,49 @@
         width: 72px;
         height: 77px;
         margin-bottom: 43px;
-        position: relative;
         &::before {
-          position: absolute;
           left: 42px;
           top: -4px;
-          content: '';
           background-image: url(/src/images/statistic-dots_x2.png);
-          background-size: contain;
           width: 30px;
           height: 30px;
-          display: block;
-          z-index: 1;
         }
       }
       &--paragraf2 {
         width: 55px;
         height: 43px;
         margin-top: 33px;
-        position: relative;
         &::before {
-          position: absolute;
           top: -3px;
           left: 42px;
-          content: '';
           background-image: url(/src/images/statistic-dots_x2.png);
-          background-size: contain;
           width: 30px;
           height: 30px;
-          display: block;
-          z-index: 1;
         }
       }
     }
-    .button {
+    .hero__btn {
       font-size: 14px;
       line-height: 18px;
 
-      &--products {
+      &--main {
         width: 104px;
         height: 40px;
-        position: absolute;
         top: 333px;
         left: 115px;
       }
 
-      &--how {
+      &--white {
         width: 138px;
         height: 40px;
-        position: absolute;
         top: 333px;
         left: 234px;
       }
-      &--how:hover {
-        background-color: $color-button-hover-secondary;
-        cursor: pointer;
-      }
+
       &--circle {
-        position: relative;
         width: 26px;
         height: 26px;
+        margin-top: 20px;
       }
     }
     &__loremIpsum {
@@ -605,11 +562,36 @@
     }
   }
   #hero-header__arrow {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    fill: #d41443;
-    top: 3px;
-    right: 2px;
+    width: 12px;
+    height: 10px;
+    top: 8px;
+    right: 6px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 100%;
   }
 }

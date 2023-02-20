@@ -1,26 +1,70 @@
 .menu-container {
   background-color: $color-menu-bg;
-  padding: 60px, 21px;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  @include tablet {
+    width: 33vw;
+    // transform: translateX(300%);
+  }
+  &__btn-wrapper {
+    width: calc(100% - 21px);
+    margin: 0 auto;
+    @include tablet {
+      width: calc(100% - 34px);
+    }
+  }
   &__btn {
     width: 100%;
+    font-size: 5vw;
+    font-weight: 600;
+    padding: 1em;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   &__items {
-    display: flex;
-    gap: 23px;
+    // display: flex;
+    // flex-direction: ;
+    // gap: 23px;
+
+    margin-top: 5.9vw;
   }
   &__item {
     display: block;
     border-top: 1px solid $color-menu-border;
     border-bottom: 1px solid $color-menu-border;
+    padding: 0.86em 0;
   }
   &__link {
+    color: $color-white;
     font-weight: 700;
+    font-size: 4.375vw;
+    margin-left: 1.5em;
+    @include tablet {
+      font-size: 16px;
+    }
     &:hover,
     &:focus {
       color: $color-main-theme;
     }
   }
+  &.is-open {
+    transform: translateX(0);
+  }
 }
+@include desktop {
+  .menu-container {
+    display: none;
+  }
+}
+
 .menu-toggle {
   border: none;
   background-color: transparent;
@@ -29,5 +73,16 @@
   }
   &__btn-close {
     color: $color-white;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    @include tablet {
+      right: 34px;
+    }
+  }
+}
+@include desktop {
+  .menu-toggle {
+    display: none;
   }
 }
