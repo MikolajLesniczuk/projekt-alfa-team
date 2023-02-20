@@ -59,7 +59,7 @@
       z-index: 1;
       content: '';
       background-image: url(/src/images/tastypic-tab.png);
-      object-fit: cover;
+      background-size: contain;
       width: 168px;
       height: 133px;
       display: block;
@@ -94,13 +94,13 @@
       height: 158.98px;
     }
     @include tablet {
-      top: 43px;
+      top: 48px;
       left: 18.4px;
       width: 162px;
       height: 80px;
     }
     @include desktop {
-      top: 70px;
+      top: 85px;
       left: 55px;
       width: 277px;
       height: 137px;
@@ -137,13 +137,13 @@
         line-height: 69.02px;
       }
       @include tablet {
-        top: 95px;
+        top: 100px;
         left: 17px;
         font-size: 34px;
         line-height: 31px;
       }
       @include desktop {
-        top: 160px;
+        top: 175px;
         left: 55px;
         font-size: 58px;
         line-height: 52px;
@@ -170,7 +170,7 @@
         @include desktop {
           position: absolute;
           left: -20px;
-          top: 150px;
+          top: 172px;
           z-index: 1;
           content: '';
           background-image: url(/src/images/jug-with-milk_desk_x2.png);
@@ -229,13 +229,16 @@
       width: 168px;
       height: 108px;
     }
-    &--number {
+    &--number1 {
       display: none;
       @media screen and (min-width: 480px) {
         display: none;
       }
       @include tablet {
+        height: 32px;
         display: block;
+        position: absolute;
+        top: 94px;
         margin-left: 700px;
         font-family: $Font-secondary;
         font-size: 28px;
@@ -246,6 +249,37 @@
         z-index: 2;
       }
       @include desktop {
+        top: 160px;
+        height: 46px;
+        margin-left: 1111px;
+        font-size: 46px;
+        line-height: 53px;
+      }
+    }
+    &--number2 {
+      display: none;
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+      @include tablet {
+        height: 32px;
+        display: block;
+        position: absolute;
+        top: 68px;
+        margin-left: 700px;
+        font-family: $Font-secondary;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: $color-main-theme;
+        z-index: 2;
+      }
+      @include desktop {
+        top: 85px;
+        height: 46px;
+        margin-top: 66px;
+        margin-left: 1111px;
         font-size: 46px;
         line-height: 53px;
       }
@@ -258,8 +292,10 @@
       @include tablet {
         display: block;
         position: absolute;
-        top: 32px;
-        left: 650px;
+        top: 128px;
+        left: 676px;
+        height: 10px;
+        padding-top: 0;
         font-family: $Font-primary;
         font-size: 8px;
         font-weight: 400;
@@ -269,8 +305,8 @@
         color: $color-white;
       }
       @include desktop {
-        top: 55px;
-        left: 18px;
+        top: 216px;
+        left: 992px;
         font-size: 14px;
         line-height: 18px;
       }
@@ -283,10 +319,11 @@
       @include tablet {
         display: block;
         position: absolute;
-        top: 32px;
-        left: 700px;
+        top: 100px;
+        left: 690px;
         right: 20px;
         width: 45px;
+        height: 10px;
         font-family: $Font-primary;
         font-size: 8px;
         font-weight: 400;
@@ -297,8 +334,8 @@
         text-align: right;
       }
       @include desktop {
-        top: 55px;
-        right: 1px;
+        top: 210px;
+        left: 1075px;
         width: 92px;
         font-size: 14px;
         line-height: 14px;
@@ -329,6 +366,7 @@
         @include tablet {
           display: block;
           position: absolute;
+          top: 90px;
           left: 725px;
           content: '';
           background-image: url(/src/images/statistic-dots_x1.png);
@@ -339,8 +377,8 @@
           z-index: 1;
         }
         @include desktop {
-          left: 42px;
-          top: -4px;
+          left: 1153px;
+          top: 156px;
           background-image: url(/src/images/statistic-dots_x2.png);
           width: 30px;
           height: 30px;
@@ -369,6 +407,7 @@
         @include tablet {
           display: block;
           position: absolute;
+          top: 68px;
           left: 725px;
           content: '';
           background-image: url(/src/images/statistic-dots_x2.png);
@@ -379,8 +418,8 @@
           z-index: 1;
         }
         @include desktop {
-          top: -3px;
-          left: 42px;
+          top: 146px;
+          left: 1153px;
           width: 30px;
           height: 30px;
         }
@@ -431,14 +470,14 @@
       @include tablet {
         width: 62.4px;
         height: 24px;
-        top: 220px;
+        top: 208px;
         left: 34px;
         padding: 0 10px;
       }
       @include desktop {
         width: 104px;
         height: 40px;
-        top: 333px;
+        top: 342px;
         left: 115px;
       }
     }
@@ -462,14 +501,14 @@
       @include tablet {
         width: 82.8px;
         height: 24px;
-        top: 220px;
+        top: 208px;
         left: 104.4px;
         padding: 0 12px;
       }
       @include desktop {
         width: 138px;
         height: 40px;
-        top: 333px;
+        top: 342px;
         left: 234px;
       }
     }
@@ -503,7 +542,7 @@
     }
     @include tablet {
       display: block;
-      width: 100px;
+      width: 114px;
       height: 48px;
       z-index: 2;
     }
@@ -524,65 +563,65 @@
         letter-spacing: 0em;
         text-align: left;
         color: $color-white;
-        margin-top: 190px;
+        margin-top: 185px;
         margin-left: 154px;
       }
       @include desktop {
         font-size: 14px;
         line-height: 20px;
-        margin-top: 314px;
+        margin-top: 382px;
         margin-left: 295px;
       }
     }
   }
-}
-#hero-header__arrow {
-  display: none;
-  @media screen and (min-width: 480px) {
+  #hero-header__arrow {
     display: none;
+    @media screen and (min-width: 480px) {
+      display: none;
+    }
+    @include tablet {
+      display: block;
+      position: absolute;
+      width: 9px;
+      height: 7px;
+      fill: #d41443;
+      top: 5px;
+      right: 3.5px;
+    }
+    @include desktop {
+      display: block;
+      width: 12px;
+      height: 10px;
+      top: 8px;
+      right: 6px;
+    }
   }
-  @include tablet {
-    display: block;
-    position: absolute;
-    width: 9px;
-    height: 7px;
-    fill: #d41443;
-    top: 5px;
-    right: 3.5px;
-  }
-  @include desktop {
-    display: block;
-    width: 12px;
-    height: 10px;
-    top: 8px;
-    right: 6px;
-  }
-}
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(360deg);
-    opacity: 100%;
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(360deg);
+      opacity: 100%;
+    }
   }
 }
