@@ -142,11 +142,11 @@
         // }
         @include tablet {
           position: absolute;
-          left: 34px;
-          top: 100px;
+          right: 34px;
+          bottom: 0;
           z-index: 1;
           content: '';
-          background-image: url(/src/images/jug-with-milk_desk_x1.png);
+          background-image: url(/src/images/jug-with-milk_tab_x1.png);
           background-size: contain;
           width: 124px;
           height: 126px;
@@ -155,8 +155,7 @@
           animation: rotate 3s forwards;
         }
         @include desktop {
-          left: 77px;
-          top: 172px;
+          right: 109px;
           background-image: url(/src/images/jug-with-milk_desk_x2.png);
           object-fit: cover;
           width: 187px;
@@ -582,54 +581,55 @@
       }
     }
   }
-  #hero-header__arrow {
-    display: none;
-    @media screen and (min-width: 480px) {
-      display: none;
-    }
-    @include tablet {
-      display: block;
-      position: absolute;
-      width: 9px;
-      height: 7px;
-      fill: #d41443;
-      top: 5px;
-      right: 3.5px;
-    }
-    @include desktop {
-      display: block;
-      width: 12px;
-      height: 10px;
-      top: 8px;
-      right: 6px;
-    }
-  }
+}
 
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 0.25;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    75% {
-      opacity: 0.75;
-    }
-    100% {
-      opacity: 1;
-    }
+#hero-header__arrow {
+  display: none;
+  @media screen and (min-width: 480px) {
+    display: none;
   }
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-      opacity: 0;
-    }
-    to {
-      transform: rotate(360deg);
-      opacity: 100%;
-    }
+  @include tablet {
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 7px;
+    fill: #d41443;
+    top: 5px;
+    right: 3.5px;
+  }
+  @include desktop {
+    display: block;
+    width: 12px;
+    height: 10px;
+    top: 8px;
+    right: 6px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 100%;
   }
 }
