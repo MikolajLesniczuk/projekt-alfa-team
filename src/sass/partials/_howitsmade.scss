@@ -1,8 +1,10 @@
 .about {
   background-color: $color-secondary-background;
   max-width: 480px;
+  padding-bottom: 39px;
   @include tablet {
     max-width: 772px;
+    padding-bottom: 66px;
   }
   @include desktop {
     max-width: 1280px;
@@ -70,8 +72,8 @@
   &__box {
     background-image: url(/src/images/madebg-mob.png);
     background-position-y: 90%;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +91,7 @@
     @include desktop {
       background-image: url(/src/images/madebg-desktop.png);
       width: 1280px;
+      background-size: cover;
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url(/src/images/madebg-desktop-x2.png);
       }
@@ -133,7 +136,8 @@
       max-width: 340px;
     }
     @include desktop {
-      min-width: 463px;
+      max-width: 463px;
+      min-height: 79px;
     }
   }
   &__text--grey {
@@ -146,6 +150,7 @@
     }
     @include desktop {
       margin-bottom: 45px;
+      min-height: 155px;
     }
   }
   &__btn {
