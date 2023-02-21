@@ -8,10 +8,10 @@
   margin-bottom: 50px;
 
   @include tablet {
-    padding: 0 34px 50px 34px;
+    padding: 0 34px 100px 34px;
   }
   @include desktop {
-    padding: 0 112px;
+    padding: 0 112px 100px 112px;
   }
   &__head {
     margin-bottom: 152px;
@@ -148,7 +148,6 @@
   }
 
   &__item--pink::before {
-    z-index: 999;
     position: absolute;
     top: -117px;
     width: 249px;
@@ -441,9 +440,9 @@
       width: 329px;
     }
   }
-  &__item:hover > .products__overlay--shake,
-  &__item:focus > .products__overlay--shake,
-  &__item:active > .products__overlay--shake {
+  &__item--shake:hover > .products__overlay--shake,
+  &__item--shake:focus > .products__overlay--shake,
+  &__item--shake:active > .products__overlay--shake {
     animation-name: productsOverlaydownshake;
     animation-duration: 1500ms;
     animation-fill-mode: forwards;
@@ -453,7 +452,7 @@
     position: absolute;
     top: -200px;
   }
-  &__idHelper-milkShake {
+  &__idHelper--milkShake {
     position: absolute;
     top: -350px;
   }
@@ -466,7 +465,7 @@
   }
 
   @include tablet {
-    .products__idHelper-milkShake {
+    .products__idHelper--milkShake {
       position: absolute;
       top: -200px;
     }
