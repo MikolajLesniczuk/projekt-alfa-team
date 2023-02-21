@@ -1,118 +1,134 @@
-.footer__title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: $color-main-background;
-  font-family: $Font-secondary;
-  padding-left: 20px;
-  padding-top: 50px;
-  width: 472px;
-  height: 34px;
-}
-
-.footer__title--down {
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: $color-main-theme;
-  font-family: $Font-secondary;
-  padding-left: 25px;
-  padding-top: 50px;
-  width: 474px;
-  height: 66px;
-}
-.footer__social-list {
-  list-style-type: none;
+.footer {
+  background-color: $color-secondary-background;
+  font-family: DM Sans;
   display: flex;
-  align-items: center;
-  justify-content: right;
-  padding-bottom: 30px;
-  cursor: pointer;
-  padding-bottom: 43px;
-  @include tablet {
-    padding-left: 50px;
-    padding-bottom: 10px;
-    @include desktop {
-      padding-left: 430px;
+  flex-wrap: wrap;
+  &__wrapper {
+    width: 100%;
+    @include tablet {
+      width: 50%;
     }
   }
-}
-.footer__social-list--itemm {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: $color-main-background;
-  fill: #ffffff;
-  padding-left: 6px;
-  padding-top: 6px;
-  margin: 25px;
-  background-image: linear-gradient(rgba(247, 241, 241, 0.089), rgba(254, 254, 255, 0));
-}
-
-.footer__social-list--itemm:focus,
-.footer__social-list--itemm:hover {
-  fill: #ffffff;
-  background-color: $color-button-hover-main;
-}
-
-.footer__kontakt {
-  color: $color-black;
-  font-family: $Font-primary;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer__number {
-  color: $color-main-theme;
-  size: 14px;
-  font-weight: 700;
-
-  @include desktop {
-    padding-right: 125px;
+  &__title-upper {
+    padding: 0 66px 17px 22px;
+    font-family: Titan One;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    color: $color-secondary-theme;
+    @include tablet {
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      padding: 0 0px 16px 36px;
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: 34px;
+      padding-left: 114px;
+    }
   }
-}
-.footer__foot {
-  color: $color-small-text;
-  size: 14px;
-  display: flexbox;
-  padding-top: 22px;
-  border-top: 2px solid $color-testimonials-quote;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding-bottom: 25px;
-  font-weight: 700;
-  width: 150 px;
-  height: 42px;
-  display: flex;
-  align-content: center;
-}
-.footer__footer {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  padding-left: 40px;
-  padding-bottom: 25px;
-  @include tablet {
-    padding: 0px 10px 175px;
+  &__title-lower {
+    padding: 0 100px 43px 20px;
+    font-family: Titan One;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: $color-main-theme;
+    @include tablet {
+      font-size: 48px;
+      line-height: 55px;
+      letter-spacing: 0.06em;
+      padding: 0 92px 91px 36px;
+    }
+    @include desktop {
+      font-size: 58px;
+      font-weight: 400;
+      line-height: 66px;
+      letter-spacing: 0.06em;
+      padding: 0 0 91px 114px;
+    }
   }
-}
-.fufu {
-  display: inline-flexbox;
-}
-br {
-  @include desktop {
-    display: none;
+  &__social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    padding-right: 21px;
+    @include tablet {
+      padding-right: 36px;
+      gap: 30px;
+    }
+    @include desktop {
+      padding-right: 121px;
+    }
   }
-}
-.did {
-  @include tablet {
-    position: absolute;
-    padding-top: 30px;
-    padding-bottom: 91px;
+  &__icon {
+    fill: $color-white;
+  }
+  &__link {
+    background-color: $color-secondary-theme;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    &:hover,
+    &:focus {
+      background-color: $color-main-theme;
+      cursor: pointer;
+    }
+    @include tablet {
+      width: 34px;
+      height: 34px;
+    }
+  }
+  &__contact {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22.32px;
+    text-align: right;
+    padding: 46px 20px 43px 70px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 26px;
+      padding-right: 36px;
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      padding: 50px 116px 98px;
+    }
+  }
+  &__contact-tel {
+    color: $color-main-theme;
+  }
+  &__trademark {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    color: $color-small-text;
+    padding: 22px 91px 25px 79px;
+    border-top: 1px solid $color-testimonials-quote;
+    @include tablet {
+      line-height: 26px;
+      letter-spacing: 0.02em;
+      padding: 29px 0 18px 0;
+    }
+    @include desktop {
+      padding-top: 9px;
+      padding-bottom: 10px;
+    }
+  }
+  &__wrapper-trademark {
+    width: 100%;
+    @include tablet {
+      flex-basis: 100%;
+    }
   }
 }
