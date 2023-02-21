@@ -2,6 +2,13 @@
   font-family: $Font-primary;
 
   padding: 0 20px;
+  padding-bottom: 86px;
+  @include tablet {
+    padding-bottom: 119px;
+  }
+  @include desktop {
+    padding-bottom: 132px;
+  }
 
   &__customer-image {
     margin: 0 auto;
@@ -10,16 +17,20 @@
     display: block;
   }
   &__box {
+    margin: 0 auto;
+
     margin-top: 29px;
     margin-bottom: 8px;
     padding: 43px 66px 26px 57px;
     background: $color-testimonials-background;
 
     @include tablet {
-      padding: 47px 80px 34px 80px;
+      max-width: 620px;
+      padding: 47px 0px 34px 0px;
       background: $color-testimonials-background-tablet;
     }
     @include desktop {
+      max-width: 926px;
       padding: 47px 89px 39px 87px;
       background: $color-testimonials-background;
     }
@@ -57,7 +68,6 @@
       line-height: 30px;
       letter-spacing: 0.04em;
       max-width: 750px;
-      margin: 0 auto;
       background-image: repeating-linear-gradient(
         to bottom,
         $color-testimonials-background,
@@ -135,5 +145,4 @@
 }
 .tabcontent {
   display: none;
-
 }
