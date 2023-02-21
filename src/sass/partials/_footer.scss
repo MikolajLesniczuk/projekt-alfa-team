@@ -1,8 +1,11 @@
 .footer {
   background-color: $color-secondary-background;
   font-family: DM Sans;
-  display: flex;
-  flex-wrap: wrap;
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__wrapper {
     width: 100%;
     @include tablet {
