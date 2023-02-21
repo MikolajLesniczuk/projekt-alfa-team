@@ -1,8 +1,14 @@
+.section__bg {
+  background-color: $color-secondary-background;
+  background-image: linear-gradient(to bottom, $color-white 15%, $color-secondary-background 15%);
+}
+
 .contacts {
   padding-left: 50px;
   padding-right: 50px;
   &__background {
-    background-image: linear-gradient(to bottom, $color-white 15%, $color-secondary-background 15%);
+    padding-top: 0;
+    padding-bottom: 113px;
   }
 
   &__container {
@@ -142,6 +148,11 @@
 }
 
 @include tablet {
+  .contacts__background {
+    padding-top: 0;
+    padding-bottom: 158px;
+  }
+
   .contacts {
     &__list {
       flex-wrap: wrap;
@@ -209,6 +220,11 @@
 }
 
 @include desktop {
+  .contacts__background {
+    padding-top: 0;
+    padding-bottom: 165px;
+  }
+
   .contacts {
     padding-left: 0;
     padding-right: 0;
