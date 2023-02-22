@@ -225,6 +225,15 @@
     padding-bottom: 165px;
   }
 
+  .section__bg--doc {
+    // padding-left: 115px;
+    // padding-right: 115px;
+    background-size: 1920px 382px;
+    background-image: url('../images/pinkdot-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 22%;
+  }
+
   .contacts {
     padding-left: 0;
     padding-right: 0;
@@ -269,14 +278,8 @@
       line-height: 183%;
     }
 
-    &__list {
-      padding-left: 115px;
-      padding-right: 115px;
-      background-size: 1280px 382px;
-      background-image: url('../images/pinkdot-bg.png');
-      background-repeat: no-repeat;
-      background-position: 50% 54%;
-    }
+    // &__list {
+    // }
   }
 }
 
