@@ -1,608 +1,436 @@
 .hero-header {
-  width: 100vw;
-  min-height: 399px;
   background-color: $color-main-background;
-  position: relative;
-  @include phone {
-    max-width: 480px;
-  }
-  @include tablet {
-    max-width: 768px;
-    min-height: 502px;
-    margin: auto;
-  }
-  @include desktop {
-    max-width: 1280px;
-    min-height: 665px;
-  }
-
-  &::before {
-    position: absolute;
-    left: 11.25vw;
-    bottom: 3.75vw;
-    z-index: 1;
-    content: '';
-    background-image: url(/src/images/Ellipse-header_x1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 107.5vw;
-    max-width: 344px;
-    height: 107.5vw;
-    max-height: 344px;
-    display: block;
-    // @media screen and (min-width: 480px) {
-    //   left: 57.6px;
-    //   top: 124.51px;
-    //   width: 420px;
-    //   height: 420px;
-    // }
-    @include tablet {
-      left: 307px;
-      top: 31px;
-      background-image: url(/src/images/Ellipse-header-tablet_x2.png);
-      width: 324px;
-      height: 324px;
-    }
-    @include desktop {
-      left: 475px;
-      top: 52px;
-      width: 538px;
-      height: 538px;
-    }
-  }
-  &::after {
-    display: none;
-    @include tablet {
-      position: absolute;
-      left: 566px;
-      top: 266px;
-      z-index: 1;
-      content: '';
-      background-image: url(/src/images/tastypic-tab.png);
-      background-size: contain;
-      width: 168px;
-      height: 133px;
-      display: block;
-      opacity: 0;
-      animation: rotate 3s forwards;
-    }
-    @include desktop {
-      left: 878px;
-      top: 433px;
-      background-image: url(/src/images/tastypic-tab-x2.png);
-      width: 293px;
-      height: 232px;
-    }
-  }
-  &__title {
-    position: absolute;
-    top: 60vw;
-    left: 6.25vw;
-    z-index: 3;
-    width: 68.125vw;
-    text-transform: uppercase;
-    font-family: $Font-secondary;
-    font-style: normal;
-    font-weight: 100;
-    text-align: left;
-    animation: fade-in 2s linear;
-    // @include phone {
-    //   top: 145.5px;
-    //   left: 15.6px;
-    //   width: 327.02px;
-    // }
-    @include tablet {
-      top: 48px;
-      left: 18.4px;
-      width: 162px;
-      height: 80px;
-    }
-    @include desktop {
-      top: 85px;
-      left: 55px;
-      width: 277px;
-      height: 137px;
-    }
-
-    &--upperPart {
-      color: $color-white;
-      font-size: 8.125vw;
-      letter-spacing: 0.04em;
-      // @media screen and (min-width: 480px) {
-      //   font-size: 39px;
-      //   line-height: 45.02px;
-      // }
-      @include tablet {
-        font-size: 22px;
-      }
-      @include desktop {
-        font-size: 38px;
-      }
-    }
-
-    &--downPart {
-      color: $color-red;
-      font-size: 15vw;
-      letter-spacing: 0em;
-      // @media screen and (min-width: 480px) {
-      //   top: 235.2px;
-      //   font-size: 72px;
-      //   line-height: 69.02px;
-      // }
-      @include tablet {
-        font-size: 34px;
-      }
-      @include desktop {
-        font-size: 58px;
-      }
-      &::after {
-        display: none;
-        // @media screen and (min-width: 480px) {
-        //   display: none;
-        // }
-        @include tablet {
-          position: absolute;
-          right: 34px;
-          bottom: 0;
-          z-index: 1;
-          content: '';
-          background-image: url(/src/images/jug-with-milk_tab_x1.png);
-          background-size: contain;
-          width: 124px;
-          height: 126px;
-          display: block;
-          opacity: 0;
-          animation: rotate 3s forwards;
-        }
-        @include desktop {
-          right: 109px;
-          background-image: url(/src/images/jug-with-milk_desk_x2.png);
-          object-fit: cover;
-          width: 187px;
-          height: 191px;
-        }
-      }
-    }
-  }
-  &__mainPicture {
-    position: absolute;
-    min-width: 53.44vw;
-    max-height: 137px;
-    bottom: 0;
-    right: 10vw;
-    z-index: 2;
-    object-fit: cover;
-    animation: fade-in 2s linear;
-    @include tablet {
-      min-width: 146px;
-      right: 247px;
-    }
-    @include desktop {
-      min-width: 236x;
-      right: 450px;
-    }
-  }
-  .hero__btn {
-    font-family: $Font-primary;
-    font-size: 2.5vw;
-    font-weight: 400;
-    line-height: 3.13vw;
-    letter-spacing: 0em;
-    text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  &__container {
+    padding: 6px 20px 0 20px;
+    background-color: $color-main-background;
+    position: relative;
     @include phone-max {
-      padding: 0 48px;
-    }
-    &--link1 {
-      color: $color-white;
-    }
-    &--link2 {
-      color: $color-main-theme;
-    }
-
-    &--main {
-      width: 19.5vw;
-      height: 7.5vw;
-      position: absolute;
-      top: 99.38vw;
-      left: 6.25vw;
-      z-index: 2;
-      padding: 0 4.2vw;
-    }
-
-    &--white {
-      width: 25.88vw;
-      height: 7.5vw;
-      position: absolute;
-      top: 99.38vw;
-      left: 28.25vw;
-      z-index: 3;
-      padding: 0 4.2vw;
-    }
-  }
-  &__statistic {
-    display: none;
-    @media screen and (min-width: 480px) {
-      display: none;
+      max-height: 759px;
     }
     @include tablet {
-      display: flex;
-      flex-direction: column;
-      row-gap: 14px;
-      width: 55px;
-      height: 108px;
+      min-height: 399px;
+      width: 100vw;
+      min-height: 399px;
+      background-color: $color-main-background;
       position: relative;
     }
-    @include desktop {
-      width: 168px;
-      height: 108px;
+    @include phone {
+      max-width: 480px;
     }
-    &--number1 {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
+    @include tablet {
+      max-width: 768px;
+      min-height: 502px;
+      margin: auto;
+    }
+    @include desktop {
+      max-width: 1280px;
+      min-height: 665px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 11.25vw;
+      bottom: 3.75vw;
+      z-index: 1;
+      content: '';
+      background-image: url(/src/images/Ellipse-header_x1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 107.5vw;
+      max-width: 344px;
+      height: 107.5vw;
+      max-height: 344px;
+      display: block;
+
       @include tablet {
-        height: 32px;
-        display: block;
-        position: absolute;
-        top: 94px;
-        margin-left: 700px;
-        font-family: $Font-secondary;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 0.04em;
-        color: $color-main-theme;
-        z-index: 2;
+        left: 307px;
+        top: 31px;
+        background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+        width: 324px;
+        height: 324px;
       }
       @include desktop {
-        top: 160px;
-        height: 46px;
-        margin-left: 1111px;
-        font-size: 46px;
-        line-height: 53px;
+        min-height: 665px;
+        padding: 38px 115px 0 46px;
       }
     }
-    &--number2 {
+    &::after {
       display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
+      @include tablet {
+        position: absolute;
+        left: 11.25vw;
+        top: 50%;
+        z-index: 0;
+        content: '';
+        background-image: url(/src/images/Ellipse-header_x1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        height: 68.5vh;
+        // transform: translateY(-50%);
+        @include phone {
+          left: 54px;
+          top: 130px;
+          height: 516px;
+        }
+        @include tablet {
+          left: 307px;
+          top: 31px;
+          background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+          width: 324px;
+          height: 322px;
+        }
+        @include desktop {
+          left: 475px;
+          top: 52px;
+          width: 538px;
+          height: 538px;
+        }
+      }
+    }
+    &__title-wrapper {
+      width: 36.8vw;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 6vw;
+      @include phone {
+        margin-bottom: 28.5px;
+        max-width: 327px;
       }
       @include tablet {
-        height: 32px;
-        display: block;
-        position: absolute;
-        top: 68px;
-        margin-left: 700px;
-        font-family: $Font-secondary;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 0.04em;
-        color: $color-main-theme;
-        z-index: 2;
+        margin-bottom: 20px;
+        max-width: 162px;
+      }
+      @include desktop {
+        margin-bottom: 25px;
+        max-width: 277px;
+      }
+    }
+    &__title {
+      display: block;
+      position: absolute;
+      top: 60vw;
+      left: 6.25vw;
+      z-index: 3;
+      width: 68.125vw;
+      text-transform: uppercase;
+      font-family: $Font-secondary;
+      font-style: normal;
+      font-weight: 100;
+      text-align: left;
+      animation: fade-in 2s linear;
+      // @include phone {
+      //   top: 145.5px;
+      //   left: 15.6px;
+      //   width: 327.02px;
+      // }
+      @include tablet {
+        top: 48px;
+        left: 18.4px;
+        width: 162px;
+        height: 80px;
       }
       @include desktop {
         top: 85px;
-        height: 46px;
-        margin-top: 66px;
-        margin-left: 1111px;
-        font-size: 46px;
-        line-height: 53px;
+        left: 55px;
+        width: 277px;
+        height: 137px;
       }
-    }
-    &--kind1 {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-      @include tablet {
-        display: block;
-        position: absolute;
-        top: 128px;
-        left: 676px;
-        height: 10px;
-        padding-top: 0;
-        font-family: $Font-primary;
-        font-size: 8px;
-        font-weight: 400;
-        line-height: 10px;
-        letter-spacing: 0em;
-        text-align: right;
+
+      &--upperPart {
         color: $color-white;
-      }
-      @include desktop {
-        top: 216px;
-        left: 992px;
-        font-size: 14px;
-        line-height: 18px;
-      }
-    }
-    &--kind2 {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-      @include tablet {
-        display: block;
-        position: absolute;
-        top: 100px;
-        left: 690px;
-        right: 20px;
-        width: 45px;
-        height: 10px;
-        font-family: $Font-primary;
-        font-size: 8px;
-        font-weight: 400;
-        line-height: 10px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: $color-white;
-        text-align: right;
-      }
-      @include desktop {
-        top: 210px;
-        left: 1075px;
-        width: 92px;
-        font-size: 14px;
-        line-height: 14px;
-      }
-    }
-    &--paragraf1 {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-      @include tablet {
-        display: block;
-        width: 43px;
-        height: 44px;
-        margin-bottom: 43px;
-        position: relative;
-      }
-      @include desktop {
-        width: 72px;
-        height: 77px;
-        margin-bottom: 43px;
-      }
-      &::before {
-        display: none;
-        @media screen and (min-width: 480px) {
-          display: none;
-        }
+        font-size: 8.125vw;
+        letter-spacing: 0.04em;
+        // @media screen and (min-width: 480px) {
+        //   font-size: 39px;
+        //   line-height: 45.02px;
+        // }
         @include tablet {
-          display: block;
-          position: absolute;
-          top: 90px;
-          left: 725px;
-          content: '';
-          background-image: url(/src/images/statistic-dots_x1.png);
-          background-size: contain;
-          width: 16px;
-          height: 16px;
-          display: block;
-          z-index: 1;
+          font-size: 22px;
         }
         @include desktop {
-          left: 1153px;
-          top: 156px;
-          background-image: url(/src/images/statistic-dots_x2.png);
-          width: 30px;
-          height: 30px;
+          font-size: 38px;
         }
       }
-    }
-    &--paragraf2 {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-      @include tablet {
-        display: block;
-        width: 55px;
-        height: 43px;
-        position: relative;
-      }
-      @include desktop {
-        margin-top: 33px;
-      }
-      &::before {
-        display: none;
-        @media screen and (min-width: 480px) {
-          display: none;
-        }
+      &--downPart {
+        color: $color-red;
+        font-size: 15vw;
+        letter-spacing: 0em;
+        // @media screen and (min-width: 480px) {
+        //   top: 235.2px;
+        //   font-size: 72px;
+        //   line-height: 69.02px;
+        // }
         @include tablet {
-          display: block;
-          position: absolute;
-          top: 68px;
-          left: 725px;
-          content: '';
-          background-image: url(/src/images/statistic-dots_x2.png);
-          background-size: contain;
-          width: 16px;
-          height: 16px;
-          display: block;
-          z-index: 1;
+          font-size: 34px;
         }
         @include desktop {
-          top: 146px;
-          left: 1153px;
-          width: 30px;
-          height: 30px;
+          font-size: 58px;
+        }
+        &::after {
+          display: none;
+          // @media screen and (min-width: 480px) {
+          //   display: none;
+          // }
+          @include tablet {
+            position: absolute;
+            right: 34px;
+            bottom: 0;
+            z-index: 1;
+            content: '';
+            background-image: url(/src/images/jug-with-milk_tab_x1.png);
+            background-size: contain;
+            width: 124px;
+            height: 126px;
+            display: block;
+            opacity: 0;
+            animation: rotate 3s forwards;
+          }
+          @include desktop {
+            right: 109px;
+            background-image: url(/src/images/jug-with-milk_desk_x2.png);
+            object-fit: cover;
+            width: 187px;
+            height: 191px;
+          }
         }
       }
     }
-  }
-  &__btn {
-    font-family: $Font-primary;
-    font-size: 2.5vw;
-    font-weight: 400;
-    line-height: 3.13vw;
-    letter-spacing: 0em;
-    text-align: center;
-    @media screen and (min-width: 480px) {
-      font-size: 12px;
-      line-height: 15.02px;
+    &__mainPicture {
+      position: absolute;
+      min-width: 53.44vw;
+      max-height: 137px;
+      bottom: 0;
+      right: 10vw;
+      z-index: 2;
+      object-fit: cover;
+      animation: fade-in 2s linear;
+      @include tablet {
+        min-width: 146px;
+        right: 247px;
+      }
+      @include desktop {
+        min-width: 236x;
+        right: 450px;
+      }
     }
-    @include tablet {
-      font-size: 8px;
-      line-height: 10px;
+    .hero__btn {
+      font-family: $Font-primary;
+      font-size: 2.5vw;
+      font-weight: 400;
+      line-height: 3.13vw;
+      letter-spacing: 0em;
+      text-align: center;
+      @include phone-max {
+        padding: 0 48px;
+      }
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
+
+      &--main {
+        width: 19.5vw;
+        height: 7.5vw;
+        position: absolute;
+        top: 99.38vw;
+        left: 6.25vw;
+        z-index: 2;
+        padding: 0 4.2vw;
+      }
+
+      &--white {
+        width: 25.88vw;
+        height: 7.5vw;
+        position: absolute;
+        top: 99.38vw;
+        left: 28.25vw;
+        z-index: 3;
+        padding: 0 4.2vw;
+      }
     }
-    @include desktop {
-      font-size: 14px;
-      line-height: 18px;
-    }
-    &--link1 {
-      color: $color-white;
-    }
-    &--link2 {
+    &__number {
+      font-family: $Font-secondary;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
       color: $color-main-theme;
-    }
-
-    &--left {
-      width: 19.5vw;
-      height: 7.5vw;
-      position: absolute;
-      top: 99.38vw;
-      left: 6.25vw;
+      text-align: left;
+      position: relative;
       z-index: 2;
-      padding: 0 4.2vw;
-      @media screen and (min-width: 480px) {
-        width: 91.82px;
-        height: 36px;
-        top: 477.02px;
-        left: 30px;
-        padding: 0 20px;
-      }
-      @include tablet {
-        width: 62.4px;
-        height: 24px;
-        top: 208px;
-        left: 34px;
-        padding: 0 10px;
-      }
-      @include desktop {
-        width: 104px;
-        height: 40px;
-        top: 342px;
-        left: 115px;
-      }
-    }
 
-    &--right {
-      width: 25.88vw;
-      height: 7.5vw;
-      position: absolute;
-      top: 99.38vw;
-      left: 28.25vw;
-      z-index: 3;
-      padding: 0 4.2vw;
-      @media screen and (min-width: 480px) {
-        width: 124.22px;
-        height: 36px;
-        top: 477.02px;
-        left: 135.6px;
-        background-color: $color-white;
-        padding: 0 20px;
-      }
-      @include tablet {
-        width: 82.8px;
-        height: 24px;
-        top: 208px;
-        left: 104.4px;
-        padding: 0 12px;
-      }
       @include desktop {
-        width: 138px;
-        height: 40px;
-        top: 342px;
-        left: 234px;
+        font-size: 46px;
       }
     }
-
-    &--circle {
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-      @include tablet {
-        display: block;
-        position: relative;
-        padding: 0;
-        width: 18px;
-        height: 18px;
-        margin-top: 7px;
-        margin-left: 154px;
-      }
-      @include desktop {
-        width: 26px;
-        height: 26px;
-        margin-top: 20px;
-        margin-left: 295px;
-      }
-    }
-  }
-  &__loremIpsum {
-    display: none;
-    @media screen and (min-width: 480px) {
-      display: none;
-    }
-    @include tablet {
+    &__stat {
       display: block;
-      width: 114px;
-      height: 48px;
+      font-family: $Font-primary;
+      font-size: 8px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: $color-white;
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+
+    &__milk {
+      // width: 114px;
+      // height: 48px;
       z-index: 2;
-    }
-    @include desktop {
-      width: 200px;
-      height: 78px;
-    }
-    &--text {
-      display: none;
-      @media screen and (min-width: 480px) {
+      display: flex;
+      align-content: center;
+      gap: 30px;
+      @include tablet-max {
         display: none;
       }
+      @include desktop {
+        // width: 200px;
+        // height: 78px;
+      }
+    }
+    &__milkPicture {
+      min-height: 126px;
+      display: block;
+      opacity: 0;
+      animation: rotate 3s forwards;
+      @include desktop {
+        min-height: 191px;
+      }
+    }
+    &__text-wrapper {
+      max-width: 114px;
+      margin-bottom: 7px;
+      align-self: center;
+      @include desktop {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+    }
+    &__text {
+      font-size: 8px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $color-white;
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+    &__buttons {
+      z-index: 2;
+      margin-bottom: 19px;
+      @include desktop {
+        margin-bottom: 56px;
+      }
+    }
+    &__btn {
+      font-family: $Font-primary;
+      font-size: 2.5vw;
+      font-weight: 400;
+      letter-spacing: 0em;
+      padding: 1em 2em;
+      text-align: center;
+      @include phone {
+        font-size: 12px;
+      }
       @include tablet {
-        display: inline-block;
         font-size: 8px;
-        font-weight: 400;
-        line-height: 12px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: $color-white;
-        margin-top: 185px;
-        margin-left: 154px;
       }
       @include desktop {
         font-size: 14px;
-        line-height: 20px;
-        margin-top: 382px;
-        margin-left: 295px;
+      }
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
+    }
+    &__picture-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      max-height: 82vh;
+      max-width: 54vw;
+      transform: translateX(-5%);
+      @include phone {
+        right: 48px;
+        max-height: 615px;
+        max-width: 265px;
+      }
+      @include tablet {
+        right: 247px;
+        max-height: 336px;
+        max-width: 143px;
+      }
+      @include desktop {
+        right: 450px;
+        max-height: 557px;
+        max-width: 236px;
+      }
+    }
+    &__mainPicture {
+      display: block;
+    }
+  }
+}
+
+.circle {
+  &__btn {
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    @include desktop {
+      width: 26px;
+      height: 26px;
+    }
+    &__link {
+      position: relative;
+    }
+    &__arrow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 9px;
+      fill: #d41443;
+      @include desktop {
+        width: 12px;
       }
     }
   }
 }
 
-#hero-header__arrow {
-  display: none;
-  @media screen and (min-width: 480px) {
-    display: none;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  @include tablet {
-    display: block;
-    position: absolute;
-    width: 9px;
-    height: 7px;
-    fill: #d41443;
-    top: 5px;
-    right: 3.5px;
+  25% {
+    opacity: 0.25;
   }
-  @include desktop {
-    display: block;
-    width: 12px;
-    height: 10px;
-    top: 8px;
-    right: 6px;
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 100%;
   }
 }
 

@@ -12,6 +12,9 @@
   @include tablet {
     width: 33vw;
     // transform: translateX(300%);
+    @include desktop {
+      display: none;
+    }
   }
   &__btn-wrapper {
     width: calc(100% - 21px);
@@ -59,17 +62,16 @@
     transform: translateX(0);
   }
 }
-@include desktop {
-  .menu-container {
-    display: none;
-  }
-}
 
 .menu-toggle {
   border: none;
   background-color: transparent;
+  @include desktop {
+    display: none;
+  }
   &__btn {
     fill: $color-main-theme;
+    color: $color-main-theme;
   }
   &__btn-close {
     color: $color-white;
@@ -79,10 +81,5 @@
     @include tablet {
       right: 34px;
     }
-  }
-}
-@include desktop {
-  .menu-toggle {
-    display: none;
   }
 }
