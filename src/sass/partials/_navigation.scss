@@ -1,10 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 6px 20px 36px 20px;
+  margin-bottom: 43vw;
   @include tablet {
+    margin-bottom: 15px;
+  }
+  @include desktop {
     // width: 1280px;
-    padding: 38px 115px 0 46px;
+    margin-bottom: 84px;
   }
   &__wrapper {
     display: flex;
@@ -34,11 +37,11 @@
     }
   }
   &__btn {
-    font-size: 16px;
-    font-weight: 600;
     @include tablet-max {
       display: none;
     }
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 

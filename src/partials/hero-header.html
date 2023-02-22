@@ -1,156 +1,300 @@
-
-<section class=" container hero-header">
-    <div class="hero-header__title">
-        <h1>
-            <span class="hero-header__title hero-header__title--upperPart">ice cream made with</span>
-            <span class="hero-header__title hero-header__title--downPart">passion</span>
-        </h1>
+<section class="hero-header">
+  <div class="container hero-header__container">
+    <div class="header">
+      <div class="header__wrapper">
+        <a href="index.html"
+          ><img src="/src/images/logo.png" alt="logo of the icecream company"
+        /></a>
+        <button
+          type="button"
+          class="menu-toggle menu-toggle__btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 20 20">
+            <use href="/src/images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <nav>
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a class="header__link" href="index.html">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__link" href="#about-us">About us</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__link" href="#how-its-made">How it's made?</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__link" href="#our-products">Our products</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button data-modal-open type="button" class="button button--white header_btn">
+        Buy now &#10095;
+      </button>
     </div>
-    <div class="hero-header__buttons">
-        <button type="button" class="button button--main hero-header__btn hero-header__btn--left">
-            <a class="hero-header__btn hero-header__btn--link1" href="#our-products">Products</a>
-        </button>
-        <button type="button" class="button button--white hero-header__btn hero-header__btn--right">
-            <a class="hero-header_btn hero-header__btn--link2" href="#how-its-made">How it's made?</a>
-        </button>
-
-<div class="container hero-header">
-  <div class="header">
-    <div class="header__wrapper">
-      <a href="index.html"
-        ><img
-          width="199px"
-          src="/src/images/logo.png"
-          alt="logo of the icecream company"
-          srcset="./images/logo-x2.png 2x, ./images/logo-x3.png 3x"
-      /></a>
-      <button
-        type="button"
-        class="menu-toggle menu-toggle__btn js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        a
-        <svg width="24" height="24" viewBox="0 0 20 20">
-          <use href="/src/images/icons.svg#icon-menu_icon"></use>
-        </svg>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle menu-toggle__btn-close js-close-menu">&#10006;</button>
+      <button data-modal-open type="button" class="button button--white menu-container__btn">
+        Buy now &#10095;
       </button>
       <nav>
-        <ul class="header__nav-items">
-          <li class="header__nav-item">
-            <a class="header__link" href="index.html">Home</a>
+        <ul class="menu-container__items">
+          <li class="menu-container__item">
+            <a class="menu-container__item" href="index.html">Home</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__link" href="#about-us">About us</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#about-us">About us</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__link" href="#how-its-made">How it's made?</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#how-its-made">How it's made?</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__link" href="#our-products">Our products</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#our-products">Our products</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__link" href="#contact">Contact</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
-<<<<<<< HEAD
-    
-=======
-    <button type="button" class="button button--white header__btn">
-      Buy now<span class="btn-arrow">&#10095;</span>
-    </button>
-  </div>
-  <div class="menu-container js-menu-container" id="mobile-menu">
-    <button class="menu-toggle menu-toggle__btn-close js-close-menu">&#10006;</button>
-    <div class="menu-container__btn-wrapper">
-      <button type="button" class="button button--white menu-container__btn">
-        Buy now<span class="btn-arrow">&#10095;</span>
-      </button>
-
-    </div>
-    <nav>
-      <ul class="menu-container__items">
-        <li class="menu-container__item">
-          <a class="menu-container__link" href="index.html">Home</a>
-        </li>
-        <li class="menu-container__item">
-          <a class="menu-container__link" href="#about-us">About us</a>
-        </li>
-        <li class="menu-container__item">
-          <a class="menu-container__link" href="#how-its-made">How it's made?</a>
-        </li>
-        <li class="menu-container__item">
-          <a class="menu-container__link" href="#our-products">Our products</a>
-        </li>
-        <li class="menu-container__item">
-          <a class="menu-container__link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="hero-header__h1">
-    <h1>
-      <span class="hero-header__h1--upperPart">ice cream made with</span>
-      <span class="hero-header__h1--downPart">passion</span>
+    <h1 class="hero-header__title-wrapper">
+      <p class="hero-header__title hero-header__title--upperPart">ice cream made with</p>
+      <p class="hero-header__title hero-header__title--downPart">passion</p>
     </h1>
-  </div>
-  <div class="hero-header__buttons">
-    <button type="button" class="button hero__btn--products">
-      <a class="button--link1" href="#our-products">Products</a>
-    </button>
-    <button type="button" class="button hero__btn--how">
-      <a class="hero__btn--link2" href="#how-its-made">How it's made?</a>
-    </button>
-  </div>
-  <div class="hero-header__statistic">
-    <div class="hero-header__statistic--paragraf1">
-      <span class="hero-header__statistic--number">16</span>
-      <span class="hero-header__statistic--kind1">Cafes</span>
+    <div class="hero-header__buttons">
+      <button type="button" class="button button--main hero-header__btn hero-header__btn--left">
+        <a class="hero-header__btn hero-header__btn--link1" href="#our-products">Products</a>
+      </button>
+      <button type="button" class="button button--white hero-header__btn hero-header__btn--right">
+        <a class="hero-header_btn hero-header__btn--link2" href="#how-its-made">How it's made?</a>
+      </button>
     </div>
-    <div class="hero-header__statistic--paragraf2">
-      <span class="hero-header__statistic--number">23</span>
-      <span class="hero-header__statistic--kind2">food trucks</span>
+    <div class="hero-header__milk">
+      <img
+        class="hero-header__milkPicture"
+        alt="Jug full of milk"
+        src="/src/images/jug-with-milk_tab_x1.png"
+        srcset="
+          /src/images/jug-with-milk_tab_x2.png  248w,
+          /src/images/jug-with-milk_tab_x3.png  372w,
+          /src/images/jug-with-milk_desk_x1.png 188w,
+          /src/images/jug-with-milk_desk_x2.png 248w,
+          /src/images/jug-with-milk_desk_x3.png 372w
+        "
+        sizes="(min-width: 1280px) 188px, 124px"
+      />
+      <div class="hero-header__text-wrapper">
+        <p class="hero-header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et
+        </p>
+      </div>
+    </div>
+    <button type="button" class="button button--white circle__btn">
+      <a class="hero-header__link" href="#">
+        <svg width="12" height="12" class="hero-header__arrow" id="hero-header__arrow">
+          <use href="/src/images/icons.svg#icon-right-arrow-header"></use>
+        </svg>
+      </a>
+    </button>
+    <div class="hero-header__picture-wrapper">
+      <img
+        class="hero-header__mainPicture"
+        alt="The big colorfull icecream"
+        src="/src/images/products/mainice-mob.png"
+        srcset="
+          /src/images/products/mainice-mob-x2.png  342w,
+          /src/images/products/mainice-mob-x3.png  513w,
+          /src/images/products/mainice-tab-x2.png  286w,
+          /src/images/products/mainice-tab-x3.png  429w,
+          /src/images/products/mainice-desk-x2.png 472w,
+          /src/images/products/mainice-desk-x3.png 708w
+        "
+        sizes="(min-width: 1280px) 236px, (min-width: 768px) 143px, 54vw"
+      />
+    </div>
+    <div class="hero-header__statistics">
+      <div class="hero-header__paragraph">
+        <span class="hero-header__number">16</span>
+        <span class="hero-header__stat">Cafes</span>
+      </div>
+      <div class="hero-header__paragraph">
+        <span class="hero-header__number">23</span>
+        <span class="hero-header__stat">food trucks</span>
+      </div>
     </div>
   </div>
-
-  <img
-    class="hero-header__mainPicture"
-    alt="The big colorfull icecream"
-    src="/src/images/products/mainice-mob.png"
-    srcset="/src/images/products/mainice-mob-x2.png
->>>>>>> main
-                    /src/images/products/mainice-mob-x3.png
-                     /src/images/products/mainice-mob.png 320w,
-                     /src/images/products/mainice-mob-x2.png 640w
-                     /src/images/products/mainice-mob-x3.png 960w"
-
-        sizes="(min-width: 748px) 320px, (min-width: 480px) 640px " />
-<<<<<<< HEAD
-    <p class="hero-header__loremIpsum hero-header__loremIpsum--text">Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do
-        eiusmod
-        tempor incididunt ut labore et</p>
-    <button type="button" class="button hero-header__btn hero-header__btn--circle">
-        <a href="#">
-            <svg id="hero-header__arrow">
-                <use href="/src/images/icons.svg#icon-right-arrow-header"></use>
-            </svg>
-        </a>
-    </button>
-</section>
-=======
-    <div class="hero-header__loremIpsum">
-        <p class="hero-header__loremIpsum--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
-            tempor incididunt ut labore et</p>
-        <button type="button" class="button button--circle">
-            <a href="#">
-                <svg id="hero-header__arrow">
-                    <use href="/src/images/icons.svg#icon-right-arrow-header"></use>
-                </svg>
-            </a>
+  <div class="main-backdrop is-hidden" data-modal>
+    <div class="modal">
+      <div class="modal__heading">
+        <p class="modal__text">
+          <span class="modal__order">Order</span><span class="modal__order-white"> now!</span>
+        </p>
+        <button type="button" class="modal__close" data-modal-close>
+          <svg class="modal__icon" width="15" height="15">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
         </button>
+      </div>
+      <p class="choose">Choose</p>
+      <div class="form">
+        <form>
+          <p class="form__element">Product:</p>
+          <div class="form__label-first">
+            <label class="form__item">
+              <input type="radio" name="product" value="iceCream" checked />
+              ice cream
+            </label>
+            <label class="form__item">
+              <input type="radio" name="product" value="iceCoffee" />
+              ice coffee
+            </label>
+            <label class="form__item">
+              <input type="radio" name="product" value="milkshake" />
+              milkshake
+            </label>
+          </div>
+          <div class="form__label-second">
+            <p class="form__element">Amount:</p>
+            <label>
+              <input
+                class="form__input-position"
+                type="number"
+                name="amount"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+              />
+            </label>
+          </div>
+          <div class="form__label-third">
+            <p class="form__element">Size:</p>
+            <label>
+              <input
+                class="form__input-position"
+                type="range"
+                name="size"
+                value="200"
+                min="200"
+                max="1000"
+                step="200"
+              />
+            </label>
+          </div>
+          <p class="form__element">
+            Selected size (ml): <span class="js-selected-value">200</span>
+          </p>
+        </form>
+        <form>
+          <p class="form__element">Flavour:</p>
+          <ul class="form__list">
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="pistachio" />
+                pistachio
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="matcha" />
+                matcha
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="mintChocolateChip" />
+                mint
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="coconut" />
+                coconut
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="lemonCheesecake" />
+                lemon
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="banana" />
+                banana
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="cherry" />
+                cherry
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="mocha" />
+                mocha
+              </label>
+            </li>
+            <li class="form__grid">
+              <label class="form__item">
+                <input type="checkbox" name="flavour" value="cinnamon" />
+                cinnamon
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <form class="data">
+        <label>
+          <p class="data__label">Name</p>
+          <div>
+            <input type="text" name="username" placeholder="Name" class="data__container pink" />
+          </div>
+        </label>
+        <label>
+          <p class="data__label">Surname</p>
+          <div>
+            <input
+              type="text"
+              name="usersurname"
+              placeholder="Surname"
+              class="data__container green"
+            />
+          </div>
+        </label>
+        <label>
+          <p class="data__label">Phone number</p>
+          <div>
+            <input
+              type="tel"
+              name="phoneNumber"
+              placeholder="+48 111 111 111"
+              class="data__container lavender"
+            />
+          </div>
+        </label>
+        <label>
+          <p class="data__label">E-mail</p>
+          <input
+            type="email"
+            name="emailAddress"
+            placeholder="placeholder@gmail.com"
+            class="data__container blue"
+          />
+        </label>
+        <div class="button">
+          <button type="submit" class="button__delivery">TO DELIVERY DETAILS</button>
+        </div>
+      </form>
     </div>
+  </div>
 </section>
