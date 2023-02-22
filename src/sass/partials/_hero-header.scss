@@ -11,244 +11,373 @@
     }
     @include tablet {
       min-height: 399px;
+      width: 100vw;
+      min-height: 399px;
+      background-color: $color-main-background;
+      position: relative;
+    }
+    @include phone {
+      max-width: 480px;
+    }
+    @include tablet {
+      max-width: 768px;
+      min-height: 502px;
+      margin: auto;
     }
     @include desktop {
+      max-width: 1280px;
       min-height: 665px;
-      padding: 38px 115px 0 46px;
     }
+
     &::before {
       position: absolute;
       left: 11.25vw;
-      top: 50%;
-      z-index: 0;
+      bottom: 3.75vw;
+      z-index: 1;
       content: '';
       background-image: url(/src/images/Ellipse-header_x1.png);
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden;
-      height: 68.5vh;
-      // transform: translateY(-50%);
-      @include phone {
-        left: 54px;
-        top: 130px;
-        height: 516px;
-      }
+      width: 107.5vw;
+      max-width: 344px;
+      height: 107.5vw;
+      max-height: 344px;
+      display: block;
+
       @include tablet {
         left: 307px;
         top: 31px;
         background-image: url(/src/images/Ellipse-header-tablet_x2.png);
         width: 324px;
-        height: 322px;
+        height: 324px;
       }
       @include desktop {
-        left: 475px;
-        top: 52px;
-        width: 538px;
-        height: 538px;
+        min-height: 665px;
+        padding: 38px 115px 0 46px;
       }
     }
-  }
-  &__title-wrapper {
-    width: 36.8vw;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 6vw;
-    @include phone {
-      margin-bottom: 28.5px;
-      max-width: 327px;
-    }
-    @include tablet {
-      margin-bottom: 20px;
-      max-width: 162px;
-    }
-    @include desktop {
-      margin-bottom: 25px;
-      max-width: 277px;
-    }
-  }
-  &__title {
-    display: block;
-    text-transform: uppercase;
-    font-family: $Font-secondary;
-    font-style: normal;
-    font-weight: 100;
-    text-align: left;
-    &--upperPart {
-      color: $color-white;
-      font-size: 26px;
-      letter-spacing: 0.04em;
-    }
-    &--downPart {
-      color: $color-red;
-      font-size: 48px;
-      letter-spacing: 0em;
-    }
-  }
-
-  &__statistics {
-    @include tablet-max {
+    &::after {
       display: none;
+      @include tablet {
+        position: absolute;
+        left: 11.25vw;
+        top: 50%;
+        z-index: 0;
+        content: '';
+        background-image: url(/src/images/Ellipse-header_x1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        height: 68.5vh;
+        // transform: translateY(-50%);
+        @include phone {
+          left: 54px;
+          top: 130px;
+          height: 516px;
+        }
+        @include tablet {
+          left: 307px;
+          top: 31px;
+          background-image: url(/src/images/Ellipse-header-tablet_x2.png);
+          width: 324px;
+          height: 322px;
+        }
+        @include desktop {
+          left: 475px;
+          top: 52px;
+          width: 538px;
+          height: 538px;
+        }
+      }
     }
-    display: flex;
-    flex-direction: column;
-    row-gap: 14px;
-    min-width: 43px;
-    position: absolute;
-    top: 94px;
-    right: 34px;
-
-    @include desktop {
-      min-width: 72px;
-      top: 156px;
-      right: 97px;
-    }
-  }
-  &__paragraph {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: '';
-      background-image: url(/src/images/statistic-dots_x1.png);
-      background-size: contain;
-      width: 16px;
-      height: 16px;
+    &__title-wrapper {
+      width: 36.8vw;
+      position: relative;
       z-index: 1;
+      margin-bottom: 6vw;
+      @include phone {
+        margin-bottom: 28.5px;
+        max-width: 327px;
+      }
+      @include tablet {
+        margin-bottom: 20px;
+        max-width: 162px;
+      }
       @include desktop {
-        right: 0;
-        top: 0;
-        background-image: url(/src/images/statistic-dots_x2.png);
-        width: 30px;
-        height: 30px;
+        margin-bottom: 25px;
+        max-width: 277px;
       }
     }
-  }
-  &__number {
-    font-family: $Font-secondary;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: $color-main-theme;
-    text-align: left;
-    position: relative;
-    z-index: 2;
+    &__title {
+      display: block;
+      position: absolute;
+      top: 60vw;
+      left: 6.25vw;
+      z-index: 3;
+      width: 68.125vw;
+      text-transform: uppercase;
+      font-family: $Font-secondary;
+      font-style: normal;
+      font-weight: 100;
+      text-align: left;
+      animation: fade-in 2s linear;
+      // @include phone {
+      //   top: 145.5px;
+      //   left: 15.6px;
+      //   width: 327.02px;
+      // }
+      @include tablet {
+        top: 48px;
+        left: 18.4px;
+        width: 162px;
+        height: 80px;
+      }
+      @include desktop {
+        top: 85px;
+        left: 55px;
+        width: 277px;
+        height: 137px;
+      }
 
-    @include desktop {
-      font-size: 46px;
+      &--upperPart {
+        color: $color-white;
+        font-size: 8.125vw;
+        letter-spacing: 0.04em;
+        // @media screen and (min-width: 480px) {
+        //   font-size: 39px;
+        //   line-height: 45.02px;
+        // }
+        @include tablet {
+          font-size: 22px;
+        }
+        @include desktop {
+          font-size: 38px;
+        }
+      }
+      &--downPart {
+        color: $color-red;
+        font-size: 15vw;
+        letter-spacing: 0em;
+        // @media screen and (min-width: 480px) {
+        //   top: 235.2px;
+        //   font-size: 72px;
+        //   line-height: 69.02px;
+        // }
+        @include tablet {
+          font-size: 34px;
+        }
+        @include desktop {
+          font-size: 58px;
+        }
+        &::after {
+          display: none;
+          // @media screen and (min-width: 480px) {
+          //   display: none;
+          // }
+          @include tablet {
+            position: absolute;
+            right: 34px;
+            bottom: 0;
+            z-index: 1;
+            content: '';
+            background-image: url(/src/images/jug-with-milk_tab_x1.png);
+            background-size: contain;
+            width: 124px;
+            height: 126px;
+            display: block;
+            opacity: 0;
+            animation: rotate 3s forwards;
+          }
+          @include desktop {
+            right: 109px;
+            background-image: url(/src/images/jug-with-milk_desk_x2.png);
+            object-fit: cover;
+            width: 187px;
+            height: 191px;
+          }
+        }
+      }
     }
-  }
-  &__stat {
-    display: block;
-    font-family: $Font-primary;
-    font-size: 8px;
-    letter-spacing: 0em;
-    text-align: right;
-    color: $color-white;
-    @include desktop {
-      font-size: 14px;
+    &__mainPicture {
+      position: absolute;
+      min-width: 53.44vw;
+      max-height: 137px;
+      bottom: 0;
+      right: 10vw;
+      z-index: 2;
+      object-fit: cover;
+      animation: fade-in 2s linear;
+      @include tablet {
+        min-width: 146px;
+        right: 247px;
+      }
+      @include desktop {
+        min-width: 236x;
+        right: 450px;
+      }
     }
-  }
+    .hero__btn {
+      font-family: $Font-primary;
+      font-size: 2.5vw;
+      font-weight: 400;
+      line-height: 3.13vw;
+      letter-spacing: 0em;
+      text-align: center;
+      @include phone-max {
+        padding: 0 48px;
+      }
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
 
-  &__milk {
-    // width: 114px;
-    // height: 48px;
-    z-index: 2;
-    display: flex;
-    align-content: center;
-    gap: 30px;
-    @include tablet-max {
-      display: none;
+      &--main {
+        width: 19.5vw;
+        height: 7.5vw;
+        position: absolute;
+        top: 99.38vw;
+        left: 6.25vw;
+        z-index: 2;
+        padding: 0 4.2vw;
+      }
+
+      &--white {
+        width: 25.88vw;
+        height: 7.5vw;
+        position: absolute;
+        top: 99.38vw;
+        left: 28.25vw;
+        z-index: 3;
+        padding: 0 4.2vw;
+      }
     }
-    @include desktop {
-      // width: 200px;
-      // height: 78px;
-    }
-  }
-  &__milkPicture {
-    min-height: 126px;
-    display: block;
-    opacity: 0;
-    animation: rotate 3s forwards;
-    @include desktop {
-      min-height: 191px;
-    }
-  }
-  &__text-wrapper {
-    max-width: 114px;
-    margin-bottom: 7px;
-    align-self: center;
-    @include desktop {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
-  }
-  &__text {
-    font-size: 8px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: $color-white;
-    @include desktop {
-      font-size: 14px;
-    }
-  }
-  &__buttons {
-    z-index: 2;
-    margin-bottom: 19px;
-    @include desktop {
-      margin-bottom: 56px;
-    }
-  }
-  &__btn {
-    font-family: $Font-primary;
-    font-size: 2.5vw;
-    font-weight: 400;
-    letter-spacing: 0em;
-    padding: 1em 2em;
-    text-align: center;
-    @include phone {
-      font-size: 12px;
-    }
-    @include tablet {
-      font-size: 8px;
-    }
-    @include desktop {
-      font-size: 14px;
-    }
-    &--link1 {
-      color: $color-white;
-    }
-    &--link2 {
+    &__number {
+      font-family: $Font-secondary;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
       color: $color-main-theme;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+
+      @include desktop {
+        font-size: 46px;
+      }
     }
-  }
-  &__picture-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    max-height: 82vh;
-    max-width: 54vw;
-    transform: translateX(-5%);
-    @include phone {
-      right: 48px;
-      max-height: 615px;
-      max-width: 265px;
+    &__stat {
+      display: block;
+      font-family: $Font-primary;
+      font-size: 8px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: $color-white;
+      @include desktop {
+        font-size: 14px;
+      }
     }
-    @include tablet {
-      right: 247px;
-      max-height: 336px;
-      max-width: 143px;
+
+    &__milk {
+      // width: 114px;
+      // height: 48px;
+      z-index: 2;
+      display: flex;
+      align-content: center;
+      gap: 30px;
+      @include tablet-max {
+        display: none;
+      }
+      @include desktop {
+        // width: 200px;
+        // height: 78px;
+      }
     }
-    @include desktop {
-      right: 450px;
-      max-height: 557px;
-      max-width: 236px;
+    &__milkPicture {
+      min-height: 126px;
+      display: block;
+      opacity: 0;
+      animation: rotate 3s forwards;
+      @include desktop {
+        min-height: 191px;
+      }
     }
-  }
-  &__mainPicture {
-    display: block;
+    &__text-wrapper {
+      max-width: 114px;
+      margin-bottom: 7px;
+      align-self: center;
+      @include desktop {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+    }
+    &__text {
+      font-size: 8px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $color-white;
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+    &__buttons {
+      z-index: 2;
+      margin-bottom: 19px;
+      @include desktop {
+        margin-bottom: 56px;
+      }
+    }
+    &__btn {
+      font-family: $Font-primary;
+      font-size: 2.5vw;
+      font-weight: 400;
+      letter-spacing: 0em;
+      padding: 1em 2em;
+      text-align: center;
+      @include phone {
+        font-size: 12px;
+      }
+      @include tablet {
+        font-size: 8px;
+      }
+      @include desktop {
+        font-size: 14px;
+      }
+      &--link1 {
+        color: $color-white;
+      }
+      &--link2 {
+        color: $color-main-theme;
+      }
+    }
+    &__picture-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      max-height: 82vh;
+      max-width: 54vw;
+      transform: translateX(-5%);
+      @include phone {
+        right: 48px;
+        max-height: 615px;
+        max-width: 265px;
+      }
+      @include tablet {
+        right: 247px;
+        max-height: 336px;
+        max-width: 143px;
+      }
+      @include desktop {
+        right: 450px;
+        max-height: 557px;
+        max-width: 236px;
+      }
+    }
+    &__mainPicture {
+      display: block;
+    }
   }
 }
 
@@ -274,6 +403,34 @@
         width: 12px;
       }
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 100%;
   }
 }
 
