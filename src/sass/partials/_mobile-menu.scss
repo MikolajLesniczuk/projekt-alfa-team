@@ -65,9 +65,11 @@
     display: none;
   }
   &__btn {
+    position: relative;
     fill: $color-main-theme;
     color: $color-main-theme;
     margin-right: 30px;
+    z-index: 2;
   }
   &__btn-close {
     color: $color-white;
