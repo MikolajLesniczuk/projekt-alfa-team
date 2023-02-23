@@ -6,7 +6,6 @@
   @include tablet {
     padding-top: 37px;
   }
-
   @include desktop {
     padding-top: 37px;
   }
@@ -30,7 +29,6 @@
     min-width: 1280px;
     height: 665px;
   }
-
   &::before {
     position: absolute;
     left: 12vw;
@@ -46,7 +44,7 @@
       left: 57.6px;
       top: 124.51px;
       width: 420px;
-      height: 516.96px;
+      height: 510px;
     }
     @include tablet {
       left: 307px;
@@ -59,7 +57,7 @@
       left: 475px;
       top: 52px;
       width: 538px;
-      height: 538px;
+      height: 533px;
     }
   }
   &::after {
@@ -100,24 +98,23 @@
     text-align: left;
     animation: fade-in 2s linear;
     @media screen and (min-width: 480px) {
-      top: 145.5px;
+      top: 145.48px;
       left: 15.6px;
       width: 327.02px;
       height: 158.98px;
     }
     @include tablet {
       top: 52px;
-      left: 18.4px;
+      left: 1px;
       width: 162px;
       height: 80px;
     }
     @include desktop {
       top: 85px;
-      left: 55px;
+      left: 34px;
       width: 277px;
       height: 137px;
     }
-
     &--upperPart {
       color: $color-white;
       font-size: 8.125vw;
@@ -136,7 +133,6 @@
         line-height: 44px;
       }
     }
-
     &--downPart {
       color: $color-red;
       font-size: 15vw;
@@ -150,13 +146,13 @@
       }
       @include tablet {
         top: 100px;
-        left: 17px;
+        left: 1px;
         font-size: 34px;
         line-height: 31px;
       }
       @include desktop {
-        top: 175px;
-        left: 55px;
+        top: 182px;
+        left: 34px;
         font-size: 58px;
         line-height: 52px;
       }
@@ -200,6 +196,7 @@
     position: absolute;
     width: 53.44vw;
     height: 126.9vw;
+    top: 30vw;
     left: 36.56vw;
     z-index: 2;
     object-fit: cover;
@@ -207,20 +204,35 @@
     @media screen and (min-width: 480px) {
       width: 256.51px;
       height: 615.02px;
-      top: -8px;
+      top: 138px;
       left: 175.49px;
     }
     @include tablet {
       width: 143px;
       height: 336px;
-      top: 11px;
+      top: 63px;
       left: 378px;
     }
     @include desktop {
       width: 236px;
       height: 557px;
-      top: 23px;
-      left: 560px;
+      top: 108px;
+      left: 594px;
+    }
+  }
+  &__btnWrapper {
+    position: absolute;
+    top: 31.25vw;
+    @media screen and (min-width: 480px) {
+      top: 145px;
+    }
+    @include tablet {
+      top: 50px;
+      left: -15px;
+    }
+    @include desktop {
+      top: 88px;
+      left: 15px;
     }
   }
   &__btn {
@@ -249,7 +261,6 @@
     &--link2 {
       color: $color-main-theme;
     }
-
     &--left {
       width: 19.5vw;
       height: 7.5vw;
@@ -279,7 +290,6 @@
         left: 55px;
       }
     }
-
     &--right {
       width: 25.88vw;
       height: 7.5vw;
@@ -309,7 +319,6 @@
         left: 170px;
       }
     }
-
     &--circle {
       display: none;
       @media screen and (min-width: 480px) {
@@ -322,7 +331,7 @@
         width: 18px;
         height: 18px;
         margin-top: 7px;
-        margin-left: 134px;
+        margin-left: 115px;
       }
       @include desktop {
         width: 26px;
@@ -578,19 +587,18 @@
         letter-spacing: 0em;
         text-align: left;
         color: $color-white;
-        margin-top: 140px;
-        margin-left: 134px;
+        margin-top: 122px;
+        margin-left: 115px;
       }
       @include desktop {
         font-size: 14px;
         line-height: 20px;
-        margin-top: 298px;
+        margin-top: 250px;
         margin-left: 230px;
       }
     }
   }
 }
-
 #hero-header__arrow {
   display: none;
   @media screen and (min-width: 480px) {
@@ -613,7 +621,6 @@
     right: 6px;
   }
 }
-
 @keyframes fade-in {
   0% {
     opacity: 0;
