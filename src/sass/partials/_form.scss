@@ -4,7 +4,7 @@
   top: 100px;
 }
 .main-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   height: 100%;
@@ -25,10 +25,13 @@
 }
 
 .modal {
+  
   border: 1px solid $color-main-background;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  height: 90vh;
+  max-height: 750px;
   width: 100vw;
   max-width: 450px;
   margin: auto;
@@ -39,6 +42,7 @@
   transition-duration: 2s;
   overflow-x: hidden;
   z-index: 999;
+  
 
   &__heading {
     background-color: $color-main-background;
@@ -51,7 +55,7 @@
     letter-spacing: 0.04em;
   }
   &__text {
-    padding: 20px 0px;
+    padding: 5px 0px;
     margin: 0px;
     margin-left: 30px;
   }
@@ -86,14 +90,14 @@
   font-weight: 400;
   line-height: 44px;
   letter-spacing: 0.04em;
-  margin-top: 15px;
+  // margin-top: 15px;
   margin-bottom: 0px;
 }
 .form {
   margin-left: 25px;
   &__element {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    // padding-top: 14px;
+    padding-bottom: 6px;
     font-size: 14px;
     font-family: $Font-primary;
     font-weight: 700;
@@ -171,8 +175,8 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.02em;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   &__container {
     font-family: $Font-primary;
@@ -212,8 +216,8 @@
   }
 
   .button {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     &__delivery {
       font-family: $Font-secondary;
       font-size: 13px;
