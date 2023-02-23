@@ -157,7 +157,10 @@
   &__iteam--pink:active {
     margin-bottom: -130px;
     padding-bottom: 130px;
-    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+
     background-image: linear-gradient(to top, $color-menu-bg, transparent 30%);
   }
 
@@ -300,7 +303,9 @@
   &__iteam--shake:active {
     margin-bottom: -130px;
     padding-bottom: 130px;
-    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
     background-image: linear-gradient(to top, #75a733, transparent 30%);
   }
 
