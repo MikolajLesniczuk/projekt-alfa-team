@@ -137,19 +137,19 @@
     margin-bottom: 30px;
   }
   &__arrow {
-    margin-bottom: 40px;
     transition-property: transform;
     transition-duration: 1s;
+    margin-bottom: 40px;
   }
-  &__arrow:hover,
-  &__arrow:focus,
-  &__arrow:active {
+
+  &__arrow:hover {
     transform: rotate(-90deg);
+    margin-bottom: 40px;
   }
 
   &__item--pink {
-    transition-property: padding-bottom;
-    transition-duration: 2s;
+    transition-property: padding-bottom, box-shadow;
+    transition-duration: 1s;
     background: $color-secondary-theme;
   }
 
@@ -157,10 +157,11 @@
   &__item--pink:focus,
   &__iteam--pink:active {
     padding-bottom: 130px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, $color-menu-bg, transparent 30%);
   }
 
   &__item--pink::before {
-    z-index: 1;
     position: absolute;
     top: -117px;
     width: 249px;
@@ -217,8 +218,8 @@
   }
 
   &__item--coffee {
-    transition-property: padding-bottom;
-    transition-duration: 2s;
+    transition-property: padding-bottom, box-shadow;
+    transition-duration: 1s;
     background: $color-coffee;
   }
 
@@ -226,6 +227,8 @@
   &__item--coffee:focus,
   &__iteam--coffee:active {
     padding-bottom: 130px;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to top, #e7b56e, transparent 30%);
   }
 
   &__item--coffee::before {
@@ -286,8 +289,8 @@
   }
 
   &__item--shake {
-    transition-property: padding-bottom;
-    transition-duration: 2s;
+    transition-property: padding-bottom, box-shadow;
+    transition-duration: 1s;
     background: $color-milkshake;
   }
 
@@ -295,6 +298,8 @@
   &__item--shake:focus,
   &__iteam--shake:active {
     padding-bottom: 130px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, #75a733, transparent 30%);
   }
 
   &__item--shake::before {
