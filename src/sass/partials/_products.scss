@@ -65,13 +65,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
 
     @include tablet {
       gap: 20px;
       flex-direction: row;
-      display: flex;
       flex-wrap: nowrap;
     }
     @include desktop {
@@ -79,7 +78,7 @@
     }
   }
   &__wrapper li:not(:first-child) {
-    margin-top: 150px;
+    margin-top: 270px;
 
     @include tablet {
       margin-top: 0;
@@ -148,7 +147,7 @@
   }
 
   &__item--pink {
-    transition-property: padding-bottom, box-shadow;
+    transition-property: padding-bottom, box-shadow, margin-bottom;
     transition-duration: 1s;
     background: $color-secondary-theme;
   }
@@ -156,8 +155,9 @@
   &__item--pink:hover,
   &__item--pink:focus,
   &__iteam--pink:active {
+    margin-bottom: -130px;
     padding-bottom: 130px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(to top, $color-menu-bg, transparent 30%);
   }
 
@@ -218,7 +218,7 @@
   }
 
   &__item--coffee {
-    transition-property: padding-bottom, box-shadow;
+    transition-property: padding-bottom, box-shadow, margin-bottom;
     transition-duration: 1s;
     background: $color-coffee;
   }
@@ -226,6 +226,7 @@
   &__item--coffee:hover,
   &__item--coffee:focus,
   &__iteam--coffee:active {
+    margin-bottom: -130px;
     padding-bottom: 130px;
     box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(to top, #e7b56e, transparent 30%);
@@ -289,7 +290,7 @@
   }
 
   &__item--shake {
-    transition-property: padding-bottom, box-shadow;
+    transition-property: padding-bottom, box-shadow, margin-bottom;
     transition-duration: 1s;
     background: $color-milkshake;
   }
@@ -297,8 +298,9 @@
   &__item--shake:hover,
   &__item--shake:focus,
   &__iteam--shake:active {
+    margin-bottom: -130px;
     padding-bottom: 130px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(to top, #75a733, transparent 30%);
   }
 
