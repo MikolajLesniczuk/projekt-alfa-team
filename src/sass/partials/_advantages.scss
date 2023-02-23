@@ -22,6 +22,7 @@
     gap: 30px;
   }
   &__icon {
+    transition-duration: 1000ms;
     margin-bottom: 16px;
     @include tablet {
       margin-bottom: 36px;
@@ -29,6 +30,12 @@
     @include desktop {
       margin-bottom: 40px;
     }
+  }
+
+  &__icon:hover
+  {
+
+    transform: scale(150%);
   }
   &__title {
     color: $color-main-theme;
