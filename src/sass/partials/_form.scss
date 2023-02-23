@@ -16,7 +16,7 @@
   animation-timing-function: ease-in;
   animation-direction: normal;
   animation-fill-mode: forwards;
-  z-index: 100;
+  z-index: 999;
 }
 .is-hidden {
   visibility: hidden;
@@ -39,6 +39,7 @@
   transition-duration: 2s;
   overflow-x: hidden;
   z-index: 999;
+
   &__heading {
     background-color: $color-main-background;
     display: flex;
