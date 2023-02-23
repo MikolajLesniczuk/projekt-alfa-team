@@ -1,6 +1,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 body {
   font-family: $Font-primary;
