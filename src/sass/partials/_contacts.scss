@@ -1,6 +1,7 @@
 .section__bg {
   background-color: $color-secondary-background;
   background-image: linear-gradient(to bottom, $color-white 15%, $color-secondary-background 15%);
+  // width: 100vw;
 }
 
 .contacts {
@@ -154,6 +155,9 @@
   }
 
   .contacts {
+    padding-left: 36px;
+    padding-right: 36px;
+
     &__list {
       flex-wrap: wrap;
       flex-direction: row;
@@ -228,15 +232,21 @@
   .section__bg--doc {
     // padding-left: 115px;
     // padding-right: 115px;
-    background-size: 1920px 382px;
+    // margin-right: 100px;
+    // display: block;
+    background-position-y: 20%;
+    background-size: contain;
+    // width: 100vw;
     background-image: url('../images/pinkdot-bg.png');
     background-repeat: no-repeat;
-    background-position: 50% 22%;
+    // background-position: 50% 22%;
   }
 
   .contacts {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 115px;
+    padding-right: 115px;
+    // padding-left: 0;
+    // padding-right: 0;
 
     &__container {
       padding-left: 43px;
@@ -279,12 +289,20 @@
     }
 
     // &__list {
+    //   padding-left: 115px;
+    //   padding-right: 115px;
+    //   background-size: 1280px 382px;
+    //   background-image: url('../images/pinkdot-bg.png');
+    //   background-repeat: no-repeat;
+    //   background-position: 50% 54%;
     // }
   }
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contacts {
+  // .contacts
+
+  .section__bg--doc {
     &__list {
       background-image: url('../images/pinkdot-bg-x2.png');
     }
@@ -292,7 +310,9 @@
 }
 
 @media (min-device-pixel-ratio: 3), (min-resolution: 192dpi), (min-resolution: 3dppx) {
-  .contacts {
+  // .contacts
+
+  .section__bg--doc {
     &__list {
       background-image: url('../images/pinkdot-bg-x3.png');
     }
